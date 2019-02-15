@@ -1,4 +1,0 @@
-auto: true
-markdown: rdiscount
-permalink: /:categories/:title.html
-markdown: maruku
