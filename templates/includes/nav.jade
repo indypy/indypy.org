@@ -6,24 +6,15 @@ nav
             a(href="") About
             ul
                 li.about
-                    a(href="{{ '/the-conference'|url }}") The Conference
-                li.venue
-                    a(href="{{ '/venue'|url }}") Venue
+                    a(href="{{ '/indypy'|url }}") IndyPy
                 li.organizers
                     a(href="{{ '/organizers'|url }}") The Team
                 li.conduct
-                    a(href="/code-of-conduct") Code of Conduct
+                    a(href="{{ '/code-of-conduct'|url }}") Code of Conduct
                 li.diversity
-                    a(href="/diversity-and-inclusion") Diversity & Inclusion
-
-        li.schedule
-            a(href="") Program
-            ul
-                li.schedule
-                    a(href="{{ '/schedule'|url }}") Schedule
-                li.talks
-                    a(href="{{ '/talks'|url }}") Speakers
-
+                    a(href="{{ '/diversity-and-inclusion'|url }}") Diversity & Inclusion
+                li.volunteer
+                    a(href="{{ '/volunteer'|url }}") Volunteer
         li.sponsors
             a(href="") Sponsors
             ul
@@ -31,3 +22,7 @@ nav
                     a(href="{{ '/sponsors'|url }}") Our Sponsors
                 li.become-a-sponsor
                     a(href="/become-a-sponsor") Become A Sponsor
+        li.donate
+            a(href="https://psfmember.org/civicrm/contribute/transact?reset=1&id=8", target="_blank") Donate
+        li.contact
+            a(href="{{ '/contact'|url }}") Contact

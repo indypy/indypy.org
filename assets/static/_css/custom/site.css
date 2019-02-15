@@ -296,10 +296,6 @@ header nav {
     header nav>ul>li.home {
         display: inline-block;
     }
-    header nav > ul > li.volunteer,
-    header nav > ul > li.contact {
-        display: none;
-    }
     header nav a {
         display: block;
         position: relative;
