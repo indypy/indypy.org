@@ -19,7 +19,7 @@ html
             name="keywords",
             content="Python,PyCon,Conference,Indianapolis,Fishers,Automation"
         )
-        meta(property="og:url", content="http://2019.indypy.org/automate")
+        meta(property="og:url", content="http://2019.indypy.org")
         meta(
             property="og:description",
             content="Website for IndyPy Automate Conf ’19, a regional Python conference for automation in Fishers, IN USA."
@@ -49,7 +49,7 @@ html
                 .container
                     .logo
                         a.bg-contain.bg-ir(
-                            href="/automate",
+                            href="",
                             ff-bg="/static/images/header-logo.png"
                         ) IndyPy Automate Conf ’19
                 {% include "includes/nav.jade" %}
@@ -65,7 +65,7 @@ html
                 .container
                     ul.links
                         li
-                            a(href="{{ '/automate/code-of-conduct'|url }}") Code of Conduct
+                            a(href="{{ '/code-of-conduct'|url }}") Code of Conduct
                         li.slack
                             a(href="{{ bag('settings.SLACK_URL') }}", target="_blank")
                                 |#[i.fa.fa-slack] IndyPy

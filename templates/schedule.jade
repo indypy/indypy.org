@@ -13,7 +13,7 @@ block main
 
     .container
 
-        {% set schedule_days = site.query("/automate/schedule") %}
+        {% set schedule_days = site.query("/schedule") %}
 
         {% if schedule_days %}
         h1 Conference Schedule
