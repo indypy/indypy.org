@@ -1,0 +1,18 @@
+_template: venue.jade
+---
+title: Our Venue
+---
+background: /static/backgrounds/venue.jpg
+---
+body:
+
+**Launch Fishers (Fishers, IN)**
+
+Launch Fishers is a co-working space located in Fishers, IN. In the building are startups, entrepreneurs
+and creative companies working across an open floor plan.
+
+Our location for IndyPy Conf: Automate is the Launch Fishers theater.
+
+Around the venue are a wide variety of restaurants, coffee shops and shopping opportunities.
+This bustling area is only 20 minutes from Downtown Indianapolis.
+---

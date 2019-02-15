@@ -1,0 +1,9 @@
+[[redirects]]
+  from = "/conduct"
+  to = "/code-of-conduct"
+  status = 301
+
+[[redirects]]
+from = "/"
+to = "/automate"
+status = 301

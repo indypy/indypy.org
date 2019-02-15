@@ -1,0 +1,24 @@
+_model: talk
+---
+_template: talk.jade
+---
+speaker: Dustin Ingram
+---
+bio: 
+
+I’m Dustin (aka [@di](<https://github.com/di>)), a Developer Advocate at Google, focused on supporting the Python community on the Google Cloud Platform. I’m also a member of the [Python Packaging Authority](https://github.com/orgs/pypa/people), maintainer of the [Python Package Index](https://pypi.org/), and organizer for the [PyTexas](https://www.pytexas.org) conference.
+
+---
+company: Google
+---
+twitter: di_codes
+---
+website: https://di.codes
+---
+title: Data Protection for Developers: Past, Present, and Future
+---
+audience_level: All
+---
+abstract: 
+
+In 1970, the German state of Hesse enacted what is widely considered the very first data protection laws. Nearly fifty years later, the European Union has implemented the strongest, most comprehensive data protection regulation ever. This talk gives a crash course on data protection and the GDPR.

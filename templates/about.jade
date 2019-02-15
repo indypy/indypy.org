@@ -1,0 +1,22 @@
+extends "base.jade"
+
+block page_title
+    |{{ this.title }} &mdash; {{super()}}
+
+block body_class
+    |about
+
+block main
+
+    section#intro
+        .background(du-parallax, y="animator")
+            .image.bg-cover(ff-bg="{{ this.background }}")
+        .overlay
+        .main.vcontainer
+            .inner
+                .container
+                    .row.fade-up(in-view)
+                        .one-half.column
+                            h2 {{ this. title }}
+                        .one-half.column
+                            {{ this.body.html }}

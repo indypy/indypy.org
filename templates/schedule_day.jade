@@ -1,0 +1,40 @@
+extends "base.jade"
+
+block page_title
+    |{{ this.date|dateformat("EEEE, dd MMMM yyyy") }} &mdash; {{super()}}
+
+block meta_description
+    |{{ this.title }} &mdash; {{ this.date|dateformat("EEEE, dd MMMM yyyy") }}
+
+block body_class
+    |talks schedule
+
+block main
+
+    .container
+
+        h1 Conference {{ this.title }}
+        {% if this.description %}
+        {{ this.description.html}}
+        {% endif %}
+
+        h3 {{ this.date|dateformat("EEEE, dd MMMM yyyy") }}
+
+        table.schedule-table
+            {% for timeslot in this.program %}
+            tr
+                td.time.
+                    #[span.start {{ timeslot.start }}]
+                    -
+                    #[span.end {{ timeslot.end }}]
+                td.description
+                    {% set talk=site.query("/talks").filter((F.scheduled_date == this.date).and(F.scheduled_time == timeslot.start)).first() %}
+                    {% if talk %}
+                    a(href="{{ talk|url }}").
+                        #[span.title {{ talk.title }}]
+                        <br/>
+                        #[span.speaker {{ talk.speaker }}]
+                    {% else %}
+                    #[span.label {{ timeslot.description }}]
+                    {% endif %}
+            {% endfor %}

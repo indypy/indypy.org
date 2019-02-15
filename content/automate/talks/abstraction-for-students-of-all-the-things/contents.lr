@@ -1,0 +1,24 @@
+_model: talk
+---
+_template: talk.jade
+---
+speaker: Chris Waigl
+---
+bio:
+
+Chris Waigl has a PhD in geophysics/remote sensing. She works on detecting and mapping wildfire and related natural hazards in the Arctic and northern boreal zone. She has worked as a school teacher and for software companies in tech support, technology operations and client-facing engineering before returning to academia. She likes to use Python for reproducible science, in particular:  making maps, visualizing data, training machine learning models on satellite imagery, and introducing new people to programming. 
+
+---
+company: University of Alaska Fairbanks
+---
+twitter: chrys
+---
+website: https://www.gi.alaska.edu/~cwaigl
+---
+title: Abstraction for students of all the things
+---
+audience_level: All
+---
+abstract:
+
+You're a newish, successful, enthusiastic Python user in science or digital humanities with no computer science background. This talk suggests that thinking deeply about abstraction, that is, how to choose the right conceptual chunks for your problem, will boost your programming skills.

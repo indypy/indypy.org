@@ -1,0 +1,23 @@
+_model: talk
+---
+_template: talk.jade
+---
+speaker: Nina Zakharenko
+---
+bio:
+
+Nina Zakharenko is a Cloud Developer Advocate at Microsoft, focusing on Python. Before joining Microsoft, she was a Senior Software Engineer with over a decade of experience writing software for companies like Reddit, Meetup, and HBO. In her spare time, she enjoys snowboarding, hiking, and tinkering with wearable electronics from her home base in Portland, OR.
+---
+company: Microsoft
+---
+twitter: nnja
+---
+website: http://nnja.io
+---
+title: Light Up Your Life - With Python and LEDs!
+---
+audience_level: All
+---
+abstract:
+
+Python opens a whole new world of working with wearable electronics. MicroPython and CircuitPython are Python variants that can run with just 256k of storage space and 16k of RAM. Learn how to program LEDs with Python, to light up your life with code and creativity.

@@ -1,0 +1,72 @@
+body.about section#intro .overlay {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
+}
+body.about.organizers .item-list {
+    text-align: center;
+}
+body.about.organizers .item {
+    display: inline-block;
+    width: 400px;
+    margin: 20px;
+    vertical-align: top;
+    margin-bottom: 50px;
+}
+@media screen and (max-width: 499px) {
+    body.about.organizers .item {
+        width: 275px;
+        margin: 20px 0 50px;
+    }
+}
+body.about.organizers .headshot {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 500ms;
+}
+body.about.organizers .headshot.loaded {
+    opacity: 1;
+}
+body.about.organizers h2 {
+    margin-top: 2ex;
+    margin-bottom: 0;
+}
+body.about.organizers .title {
+    height: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+body.about.organizers .biography {
+    margin-top: 3ex;
+    text-align: left;
+    font-size: 0.8em;
+}
+body.about.organizers .contact {
+    margin-top: 1.5em;
+    text-align: center;
+    font-size: 0.8em;
+}
+body.about.organizers .contact .fa {
+    color: white;
+    padding-top: 15px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+body.about.organizers .contact a {
+    display: inline-block;
+    background: #7100FF;
+    opacity: 0.7;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    line-height: 50px;
+    margin-right: 10px;
+}
+body.about.organizers .contact a:hover {
+    opacity: 0.5;
+}

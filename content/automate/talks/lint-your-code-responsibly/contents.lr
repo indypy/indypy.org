@@ -1,0 +1,21 @@
+_model: talk
+---
+_template: talk.jade
+---
+speaker: Ania Kapuścińska
+---
+bio: 
+
+Python developer at Genomics England, previously at Clearcode. Every day tries to make people lives a bit better. Astrophysics passionate, can chat about stars & planets for hours... Besides, loves traveling, books and coffee.
+---
+company: Genomics England
+---
+twitter: lambdanis
+---
+title: Lint your code responsibly!
+---
+audience_level: Intermediate
+---
+abstract:
+
+Keeping code readable and consistent can be challenging. Fortunately, Python ecosystem developed many tools helping with that! Let's see what we can use to achieve best results. You'll learn how linters can make your life easier... and what to be careful about not to make it harder instead.

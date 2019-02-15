@@ -1,0 +1,70 @@
+extends "base.jade"
+
+block page_title
+    |{{this.title}}  &mdash; {{super()}}
+
+block body_class
+    |venue
+
+block main
+
+    section#intro
+        .background(du-parallax, y="animator")
+            .image.bg-cover(ff-bg="{{ this.background }}")
+        .overlay
+        .main.vcontainer
+            .inner
+                .container
+                    .row.fade-up(in-view)
+                        .one-half.column
+                            h2 {{ this.title }}
+                        .one-half.column
+                            {{ this.body.html }}
+
+                            .image-credit
+                                {{ this.credit.html }}
+        a.down(ng-click="scrollTo('accommodations')")
+            {% include "includes/chevron-down.svg" %}
+
+    section#location
+        .main.vcontainer#map
+
+append bottom
+    link(
+        rel="stylesheet",
+        href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+        integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+        crossorigin=""
+    )
+
+    script(
+        src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+        integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+        crossorigin=""
+    )
+
+    script.
+        var venueCoordinates = [39.9660977,-86.0107927];
+        var map = L.map(
+            'map', {
+                scrollWheelZoom: false,
+            }
+        ).setView(venueCoordinates, 16);
+        mapLink =
+            '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+
+        L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {
+            attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+            subdomains: 'abcd',
+            minZoom: 0,
+            maxZoom: 20,
+            ext: 'png'
+        }).addTo(map);
+
+        var venue = L.marker(venueCoordinates).bindPopup(
+            '<h3>Launch Fishers</h3>' +
+            '12175 Visionary Way<br>' +
+            'Fishers, IN 46038<br><br>' +
+            '<a style="color: black" href="https://goo.gl/maps/y6yZ4FCHJC32">View on Google Maps</a>'
+        ).addTo(map);
+        venue.openPopup();

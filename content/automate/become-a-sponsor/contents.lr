@@ -1,0 +1,25 @@
+_template: page.jade
+---
+title: Become Our Sponsor
+---
+body:
+
+## Become Our Sponsor
+
+IndyPy Conf is for anyone interested in learning more about Python programming as well as meeting other
+Pythonistas. Beginners, advanced developers, and tinkerers are always welcome to join us.
+
+### Sponsors
+
+Thank you to all of the sponsors that have already committed! You make all of this possible!
+
+### Levels & Benefits
+
+We are offering sponsorship levels for every budget and objective.
+
+Sponsorship Information (PDF) - Coming soon!
+
+IndyPy is a direct project of the Python Software Foundation (“the PSF”). In addition to tax deductibility
+as a marketing expense for our sponsors, any applicable benefits of the PSF’s 501(c)3 designation from the IRS
+also may apply. Determination letter from the IRS designating the PSF as a charitable organization available
+from the <a href="https://www.python.org/psf/" target="_blank">PSF website</a>.

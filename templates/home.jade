@@ -1,0 +1,93 @@
+extends "base.jade"
+
+block body_class
+    |home
+
+block main
+
+    section#intro
+        .background(du-parallax, y="animator")
+            .image.bg-cover(ff-bg="/static/backgrounds/conference-room.jpg")
+        .overlay
+        .main.vcontainer
+            .inner
+                .logo.bg-contain(ff-bg="/static/images/logo.png")
+                .dates.
+                    March 22, 2019
+        a.down(ng-click="scrollTo('welcome')")
+            {% include "includes/chevron-down.svg" %}
+
+    section#welcome
+        .background
+        .overlay
+        .main.vcontainer
+            .inner
+                .container
+                    .row.fade-up(in-view)
+                        .one-half.column
+                            h2 2019 &mdash; Fishers
+                        .one-half.column
+                            p.
+                                IndyPy Conf kicks off the 2019 conference series
+                                with a full day of talks on Automation, Orchestration
+                                and IoT using Python.
+                            p.
+                                Organized by Six Feet Up, the Indianapolis Python Meetup
+                                (“IndyPy”) is a leading national group promoting the Python
+                                programming language and connecting the Python community.
+                                IndyPy draws Python enthusiasts from the entire Midwest for
+                                regular events. In 2018, the group celebrated 11 years of
+                                success with over 1,500 members.
+                            h3.caps.
+                                March 22nd, 2019#[br]
+                                Fishers, IN USA
+
+    section#newsletter
+        .background(du-parallax, y="animator")
+            .image.bg-cover(ff-bg="/static/backgrounds/announcements.jpg")
+        .overlay
+        .main.vcontainer
+            .inner
+                .container.fade-up(in-view)
+                    .row
+                        h2 Follow The Conversation
+                        p.
+                            Join us on Meetup to keep up-to-date on the latest news.
+
+                        p
+                            a.button.join(
+                                href="https://www.meetup.com/indypy/",
+                                target="_blank"
+                            ) Join IndyPy
+
+                    .row
+                        .one-third.column.social
+                            a.indypy-icon(
+                                href="{{ bag('settings.TWITTER_URL') }}",
+                                target="_blank"
+                            ).
+                                #[i.fa.fa-2x.fa-twitter]
+                            | You can also follow us.
+
+                        .one-third.column.social
+                            a(
+                                href="{{ bag('settings.YOUTUBE_URL') }}",
+                                target="_blank"
+                            ).
+                                #[i.fa.fa-2x.fa-youtube]
+                            | Or watch our videos.
+
+                        .one-third.column.social
+                            a(
+                                href="{{ bag('settings.SLACK_URL') }}",
+                                target="_blank"
+                            ).
+                                #[i.fa.fa-2x.fa-slack]
+
+                            | Or join our Slack team.
+
+    section#sponsors
+        .main.vcontainer
+            .inner
+                .container
+                    {% include "/includes/sponsor_logos.jade" %}

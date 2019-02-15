@@ -1,0 +1,47 @@
+{% set sponsors = site.query('/automate/sponsors').include_undiscoverable(True) %}
+
+#sponsors
+    .sponsor-logos
+        {% for tier in ["diamond", "organizer", "title sponsor", "silver"] %}
+        {% set tier_sponsors = sponsors.filter(F.tier == tier).filter(F.is_npo == false) %}
+        {% if tier_sponsors %}
+        div.heading
+            h3 {{tier_sponsors.first().tier}}
+
+        .item-list
+            {% for sponsor in tier_sponsors %}
+            .item(class="{{sponsor.tier}}")
+                .logo
+                    a.bg-contain(
+                        href="{{sponsor.website}}"
+                        target="_blank"
+                        ff-bg="{{sponsor.url_path }}{{sponsor.logo}}"
+                    )
+                {{ sponsor.description.html }}
+            {% endfor %}
+        {% endif %}
+        {% endfor %}
+
+        {% for tier in ["diamond", "organizer", "title sponsor", "silver"] %}
+
+        {% set tier_sponsors = sponsors.filter(F.tier == tier).filter(F.is_npo == true) %}
+
+        {% if tier_sponsors %}
+        div.heading
+            h3 {{tier_sponsors.first().tier}} - Academic &amp; Community
+
+        .item-list
+        {% for sponsor in tier_sponsors %}
+        .item(class="{{sponsor.tier}}_npo")
+            .logo
+                a.bg-contain(
+                href="{{sponsor.website}}"
+                target="_blank"
+                ff-bg="{{sponsor.url_path }}{{sponsor.logo}}"
+                )
+            p {{ sponsor.description.html }}
+        {% endfor %}
+
+        {% endif %}
+
+        {% endfor %}

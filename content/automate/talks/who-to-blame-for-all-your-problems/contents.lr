@@ -1,0 +1,22 @@
+_model: talk
+---
+_template: talk.jade
+---
+speaker: Ben Berry
+---
+bio:
+
+I live in Seattle where I work on observability, reliability, and automation. I've worked in science research, VoIP, and eCommerce organizations building delivery pipelines, monitoring systems, and developer tooling. In my free time I hike, camp, and play tabletop games.
+
+---
+twitter: bengerman13
+---
+website: https://bengerman.com
+---
+title: Who to blame for all your problems
+---
+audience_level: All
+---
+abstract:
+
+What does it mean to conduct a postmortem blamelessly? Why should you run your postmortems without blame? This talk will show you why and how to run blameless postmortems for incidents at your workspace, whether you're a Frontend Engineer or an SRE.

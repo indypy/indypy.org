@@ -1,0 +1,53 @@
+/* background replacement */
+
+.bg-cover {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.bg-contain {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.bg-ir {
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+/* vertical centering using ghost element */
+
+.vcontainer:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    /* This is just a hack, needs proper fixing!!! */
+    /* height: 100%; */
+    margin-top: 10vh;
+}
+
+@media (min-width: 750px) {
+    .vcontainer:before {
+        /* This is just a hack, needs proper fixing!!! */
+        margin-top: 20vh;
+    }
+}
+
+.vcontainer > .inner {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* disable selection */
+
+.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+

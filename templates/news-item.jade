@@ -1,0 +1,33 @@
+extends "base.jade"
+
+block page_title
+    |{{ this.title }}
+
+block meta_description
+    | {{ posting.meta_description }}
+
+block body_class
+    |news posting-detail
+
+block main
+
+    .container
+
+        .posting
+            h1
+                a(href="{{ this.url_path|url }}") {{ this.title }}
+            .meta.
+                {% if this.author %}
+                Posted by {{ this.author }}
+                {% if this.date %}
+                on
+                {% endif %}
+                {% endif %}
+                {% if this.date %}
+                {{ this.date }}
+                {% endif %}
+            .body
+                {{ this.body.html }}
+
+        p.more
+            a(href="{{ this.parent.url_path| url }}") More news

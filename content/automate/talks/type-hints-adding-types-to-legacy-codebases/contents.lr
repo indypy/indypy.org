@@ -1,0 +1,21 @@
+_model: talk
+---
+_template: talk.jade
+---
+speaker: Iyanuoluwa Ajao
+---
+bio:
+
+I am a Physiology graduate but became a Software developer. I mostly code using Python and JavaScript. I am also interested in Machine Learning. 
+---
+twitter: IyanuAshiri
+---
+website: http://iyanuashiri.me
+---
+title: Type Hints: Adding Types To Legacy Codebases
+---
+audience_level: All
+---
+abstract:
+
+Python is often described as a dynamic language and this is one of the selling point of the language especially to beginner developers and academicians. Python 3.6 introduced type hints but this feature is not so popular among developers. This talk will help the audience understand type hints

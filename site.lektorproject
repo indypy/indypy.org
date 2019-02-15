@@ -1,0 +1,5 @@
+[project]
+name = IndyPy
+
+[packages]
+lektor-rst = 0.1

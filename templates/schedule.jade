@@ -1,0 +1,49 @@
+extends "base.jade"
+
+block page_title
+    |Schedule &mdash; {{super()}}
+
+block meta_description
+    |PyCascades Conference Schedule
+
+block body_class
+    |talks schedule
+
+block main
+
+    .container
+
+        {% set schedule_days = site.query("/automate/schedule") %}
+
+        {% if schedule_days %}
+        h1 Conference Schedule
+        {% else %}
+        h1 Schedule Coming Soon
+        {% endif %}
+
+        {% if this.description %}
+        {{ this.description.html}}
+        {% endif %}
+
+        {% for day in schedule_days %}
+        h3 {{ day.date|dateformat("EEEE, dd MMMM yyyy") }}
+
+        table.schedule-table
+            {% for timeslot in day.program %}
+            tr
+                td.time.
+                    #[span.start {{ timeslot.start }}]
+                    -
+                    #[span.end {{ timeslot.end }}]
+                td.description
+                    {% set talk=site.query("/talks").filter((F.scheduled_date == day.date).and(F.scheduled_time == timeslot.start)).first() %}
+                    {% if timeslot.link %}
+                    a(href="{{ timeslot.link|url }}").
+                        #[span.label {{ timeslot.description }}]
+                    {% else %}
+                    #[span.label {{ timeslot.description }}]
+                    {% endif %}
+            {% endfor %}
+        {% else %}
+        h3 Check out our #[a(href="{{ '/talks'|url }}") incredible speakers] while you wait.
+        {% endfor %}

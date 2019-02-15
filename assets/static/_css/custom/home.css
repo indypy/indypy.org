@@ -1,0 +1,214 @@
+@media (min-width: 750px) {
+    body.home header {
+        background-color: transparent;
+    }
+    body.home header.headroom--top {
+        background-color: transparent;
+    }
+    body.home header.headroom--not-top {
+        background-color: #161616;
+    }
+    body.home header .logo {
+        opacity: 0;
+        transition: opacity 300ms linear 300ms;
+    }
+    body.home header.headroom--not-top .logo {
+        opacity: 1;
+    }
+}
+
+body.home header nav > ul > li.home {
+    display: none;
+}
+
+body.home #intro {
+    color: #FFF;
+}
+body.home #intro .overlay {
+    background-image: linear-gradient(rgba(91, 91, 30, 0.4), rgba(0, 0, 0, 0.8));
+}
+body.home #intro .main .logo {
+    width: 80vw;
+    height: 80vh;
+    margin: 0 auto;
+}
+@media (min-width: 750px) {
+    body.home #intro .main .logo {
+        width: 50vw;
+        height: 50vh;
+    }
+}
+
+body.home #welcome {
+    background-color: #0E0E9A;
+    color: #FFF;
+}
+body.home #welcome .talks-link {
+    color: inherit;
+    font-weight: bold;
+}
+
+body.home #speakers {
+    color: #161616;
+}
+body.home #speakers .overlay {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.4));
+}
+body.home #speakers .main {
+    height: auto;
+    padding: 100px 0;
+}
+body.home #speakers .item-list {
+    text-align: center;
+}
+body.home #speakers .item {
+    display: inline-block;
+    width: 280px;
+    margin: 40px 20px;
+    color: inherit;
+    text-decoration: none;
+    vertical-align: top;
+}
+body.home #speakers .headshot {
+    display: block;
+    margin: 0 auto;
+    width: 275px;
+    height: 275px;
+    margin: 0 auto;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 500ms;
+}
+body.home #speakers .headshot.loaded {
+    opacity: 1;
+}
+body.home #speakers h4 {
+    margin-top: 2ex;
+    margin-bottom: 0;
+    text-transform: none;
+    letter-spacing: 0;
+}
+body.home #speakers .title {
+}
+
+body.home #sponsors .main {
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+}
+
+body.home #tweets {
+    background-image:
+        linear-gradient(-180deg, #FFFFFF 2%, #ABABAB 88%),
+        radial-gradient(70% 103%, #7B25FB 31%, #40208A 100%);
+    background-blend-mode: multiply;
+    color: #FFF;
+}
+body.home #tweets .main {
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+}
+body.home #tweets .twitter-tweet {
+    margin: 20px auto;
+}
+body.home #tweets .follow {
+    margin-top: 4ex;
+    text-align: center;
+}
+body.home #tweets .follow a {
+    color: inherit;
+    text-decoration: none;
+}
+body.home #tweets .follow a:hover {
+    text-decoration: underline;
+}
+
+body.home #newsletter {
+    color: #FFF;
+}
+body.home #newsletter .overlay {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8));
+}
+body.home #newsletter .row {
+    margin-bottom: 2em;
+    text-align: center;
+}
+body.home #newsletter .one-half {
+    padding: 1em;
+    padding: 1em;
+}
+
+body.home #newsletter .main {
+    text-align: center;
+}
+body.home #newsletter .main input {
+    background: #000;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+body.home #newsletter .main .button {
+    background: #616161;
+    color: #FFF;
+    font-size: 0.7em;
+    text-align: center;
+    text-transform: unset;
+}
+@media (min-width: 750px) {
+    body.home #newsletter .main input {
+        max-width: 60%;
+    }
+    body.home #newsletter .main button {
+        max-width: 20%;
+    }
+}
+
+body.home #newsletter .social .fa {
+    color: black;
+    font-size: 30px;
+    padding-top: 10px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+body.home #newsletter .social .indypy-icon {
+    background-image: url("../images/indypy-bw-400.png");
+    background-size: cover;
+}
+body.home #newsletter .social .indypy-icon .fa {
+    visibility: hidden;
+}
+
+body.home #newsletter .social a {
+    display: inline-block;
+    background: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    line-height: 50px;
+    margin-right: 10px;
+}
+body.home #newsletter a:hover {
+    opacity: 0.5;
+}
+
+/* TEMP */
+
+section#intro {
+    background: linear-gradient(rgb(0, 0, 0), rgb(42, 42, 42));
+    color: #FFF;
+}
+
+body.home #intro .dates {
+    font-size: 4vw;
+    font-weight: 900;
+    text-align: center;
+}
+
+@media (min-width: 1200px) {
+    body.home #intro .dates {
+        font-size: 2.2em;
+    }
+}

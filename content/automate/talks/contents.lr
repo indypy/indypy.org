@@ -1,0 +1,36 @@
+_model: page
+---
+_template: page.jade
+---
+title: Speakers
+---
+body:
+
+##Speakers
+
+Our speakers have not been determined yet. We are seeking 8 speakers for 30-45 minute talks and 5 lightning talks
+during lunch.
+
+Submit your papers here: <a href="https://www.papercall.io/indypy-conf" target="_blank">
+https://www.papercall.io/indypy-conf</a>
+
+The CFP ends Feb. 8th at 12am EST.
+
+Here are a few suggested categories/topics:
+- For Business:
+  - Taking Excel to the Next Level with Python
+- How to stay relevant for Sysadmins
+  - Python for Sysadmin (shell scripts > Python > services)
+  - Configuration Management/Orchestration using Salt
+  - Scheduled Job and Ad Hoc Task Management with Salt
+  - Python and Lambda for Serverless
+- For Developers:
+  - Continuous Integration
+  - Packaging: Docker
+  - Using the `requests` Library for Accessing APIs
+  - Deployment Automation
+- IoT
+  - Data Management in IoT
+  - Machine Learning and Forecasting
+  - IOT Device Management and Deployment
+-YOUR TALK HERE

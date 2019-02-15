@@ -1,0 +1,29 @@
+.item
+    {% set headshot = organizer.attachments.get('headshot.jpg') %}
+    {% if headshot %}
+    .headshot.image.bg-contain(
+        ff-bg="{{ headshot.thumbnail(200)|url }}",
+        ff-bg-2x="{{ headshot.thumbnail(400)|url }}"
+    )
+    {% else %}
+    .headshot.image.bg-contain(
+        ff-bg="/static/images/headshot.jpg",
+        ff-bg-2x="/static/images/headshot.jpg",
+    )
+    {% endif %}
+    h2 {{ organizer.name }}
+    .title {{ organizer.title }}
+    .contact
+        {% if organizer.email %}
+        a(href="mailto:{{ organizer.email }}").
+            #[i.fa.fa-2x.fa-at]
+        {% endif %}
+        {% if organizer.twitter %}
+        a(
+            href="https://www.twitter.com/{{ organizer.twitter }}",
+            target="_blank"
+        ).
+            #[i.fa.fa-2x.fa-twitter]
+        {% endif %}
+    .biography
+        {{ organizer.biography.html }}

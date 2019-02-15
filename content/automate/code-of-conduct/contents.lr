@@ -1,0 +1,81 @@
+_template: page.jade
+
+---
+
+title: Code of Conduct
+
+---
+
+body:
+
+**If you are being harassed, notice that someone else is being harassed, or have any other concerns, please
+contact the IndyPy Organizers by e-mailing ​[info@indypy.com](mailto:info@indypy.com).**
+
+IndyPy is a community intended for networking and collaboration in the Python community.
+
+We value the participation of each member of the Python community and want all attendees to have an
+enjoyable and fulfilling experience. Accordingly, all attendees are expected to show respect and courtesy
+to other attendees at the monthly meetups, conferences, and online spaces (such as Slack), whether officially
+sponsored by IndyPy or not.
+
+To make clear what is expected, all delegates/attendees, speakers, exhibitors, organizers and volunteers at any
+IndyPy event are required to conform to the following Code of Conduct. Organizers will enforce this code throughout
+the event.
+
+##THE SHORT VERSION
+
+IndyPy is dedicated to providing a harassment-free experience for everyone, regardless of gender, gender identity,
+sexual orientation, disability, physical appearance, body size, race, religion or political affiliation. We do not tolerate harassment of
+participants in any form.
+
+All communication should be appropriate for a professional audience including people of many different backgrounds.
+Sexual language and imagery is not appropriate for any venue, including talks.
+
+Be kind to others. Do not insult or put down other attendees. Behave professionally. Remember that harassment and
+sexist, racist, or exclusionary jokes are not appropriate for IndyPy. Attendees violating these rules may be asked
+to leave without a refund at the sole discretion of the organizers.
+
+Thank you for helping make this a welcoming, friendly event for all.
+
+##THE LONGER VERSION
+
+Harassment includes offensive verbal comments related to gender, gender identity, sexual orientation, disability,
+physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking,
+following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical
+contact, and unwelcome sexual attention.
+
+Participants asked to stop any harassing behavior are expected to comply immediately.
+
+Be careful in the words that you choose. Remember that sexist, racist, and other exclusionary jokes can be offensive
+to those around you. Excessive swearing and offensive jokes are not appropriate for IndyPy.
+
+If a participant engages in behavior that violates this code of conduct, the IndyPy organizers may take any action
+they deem appropriate, including warning the offender or expulsion from the event.
+
+#A member of the Python community is:
+
+##Open
+Members of the community are open to collaboration, whether it's on PEPs, patches, problems, or otherwise. We're
+receptive to constructive comment and criticism, as the experiences and skill sets of other members contribute to
+the whole of our efforts. We're accepting of all who wish to take part in our activities, fostering an environment
+where anyone can participate and everyone can make a difference.
+
+##Considerate
+Members of the community are considerate of their peers -- other Python users. We're thoughtful when addressing the
+efforts of others, keeping in mind that often times the labor was completed simply for the good of the community.
+We're attentive in our communications, whether in person or online, and we're tactful when approaching differing views.
+
+##Respectful
+Members of the community are respectful. We're respectful of others, their positions, their skills, their commitments,
+and their efforts. We're respectful of the volunteer efforts that permeate the Python community. We're respectful of
+the processes set forth in the community, and we work within them. When we disagree, we are courteous in raising
+our issues.
+
+Overall, we're good to each other. We contribute to this community not because we have to, but because we want to.
+If we remember that, these guidelines will come naturally.
+
+Questions/comments/reports Please write to ​[info@indypy.com](mailto:info@indypy.com)
+
+This page inspired by:
+- DjangoCon Code of Conduct
+- Python Software Foundation Code of Conduct

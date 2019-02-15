@@ -1,0 +1,16 @@
+{% set sponsors = site.query('/automate/sponsors').include_undiscoverable(True) %}
+
+.sponsor-logos-footer
+  ol
+    {% for tier in ["diamond", "organizer", "title sponsor", "silver"] %}
+    {% set tier_sponsors = sponsors.filter(F.tier == tier).filter(F.is_npo == false) %}
+    {% for sponsor in tier_sponsors %}
+    li(class="{{sponsor.tier}}")
+      a(
+        href="{{sponsor.website}}"
+        target="_blank"
+        title="{{sponsor.name}}"
+      )
+        img(src="{{sponsor.url_path }}/{{sponsor.logo_dark_bg|default(sponsor.logo)}}")
+    {% endfor %}
+    {% endfor %}

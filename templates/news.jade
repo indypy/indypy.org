@@ -1,0 +1,51 @@
+extends "base.jade"
+
+block page_title
+    |News &mdash; {{super()}}
+
+block meta_description
+    | PyCascades Conference News
+
+block body_class
+    |news posting-list
+
+block main
+
+    .container
+
+        h1 PyCascades News
+
+        .posting-list
+
+            {% for posting in this.children %}
+            .posting
+                h2
+                    a(href="{{ posting.url_path|url }}").
+                        {{ posting.title }}
+                .meta.
+                    {% if posting.author %}
+                    Posted by {{ posting.author }}
+                    {% if posting.date %}
+                    on
+                    {% endif %}
+                    {% endif %}
+                    {% if posting.date %}
+                    {{ posting.date|dateformat('MMMM d, ''yyyy') }}
+                    {% endif %}
+                .body
+                    .p
+                        {% if posting.meta_description %}
+                        {{ posting.meta_description }}
+                        {% else %}
+                        {{ posting.body.html|truncate() }}
+                        {% endif %}
+                        a(href="{{ posting.url_path|url }}").
+                            ➡
+                    
+                {% if not loop.last %}
+                hr
+                {% endif %}
+
+            {% else %}
+            | We don't have any news to share just yet.
+            {% endfor %}

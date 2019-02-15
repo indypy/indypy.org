@@ -1,0 +1,35 @@
+body.venue #main section {
+    color: #FFF;
+}
+
+body.venue #main section a {
+    color: #fff;
+}
+
+body.venue #main section .image-credit {
+    text-align: right;
+    font-size: 0.7em;
+}
+
+body.venue #main section .overlay {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
+}
+
+body.venue #main section .main {
+    height: auto;
+    padding: 100px 0 60px;
+}
+@media (min-width: 750px) {
+    body.venue #main section .main {
+        height: 100vh;
+        padding: 0;
+    }
+}
+
+body.venue #main #map {
+    min-height: 200px;
+}
+
+body.venue #main #map .overlay {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
+}

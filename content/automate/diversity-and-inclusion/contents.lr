@@ -1,0 +1,23 @@
+_template: page.jade
+---
+title: Diversity & Inclusion
+---
+body:
+##Diversity & Inclusion
+
+Our goal is to create an inclusive, respectful conference environment that invites participation from
+people of all races, ethnicities, genders, ages, abilities, religions, and sexual orientations. IndyPy
+and its organizers, volunteers, and staff fully support and endorse the [Python Software Foundation’s
+diversity statement](https://www.python.org/community/diversity/):
+
+>“The Python Software Foundation and the global Python community welcome and encourage participation by everyone.
+Our community is based on mutual respect, tolerance, and encouragement, and we are working to help each other live
+up to these principles. We want our community to be more diverse: whoever you are, and whatever your background,
+we welcome you.”
+
+We’re actively seeking to increase the diversity of our attendees, speakers, and sponsors through our calls for
+proposals, other open submission processes, and through dialogue with the larger communities we serve.
+
+This is an ongoing process. We are talking to experts and organizations about this goal and about ways they can
+help us achieve it. If you feel that there is more we can do, or if you would like to get involved, please
+reach out to us at ​[info@indypy.com](mailto:info@indypy.com).

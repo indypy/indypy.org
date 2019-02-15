@@ -1,0 +1,15 @@
+.DS_Store
+
+__pycache__/
+*.egg-info
+
+_build/
+.webassets-cache/
+
+assets/static/css/
+assets/static/js/
+
+env
+.venv
+.idea/
+.python-version

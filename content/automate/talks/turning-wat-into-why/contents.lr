@@ -1,0 +1,23 @@
+_model: talk
+---
+_template: talk.jade
+---
+speaker: Katie McLaughlin
+---
+bio:
+
+Katie has worn many different hats over the years. She has been a software developer for many languages, systems administrator for multiple operating systems, and speaker on many different topics. She's currently a Director of the Python Software Foundation, and conference director of PyCon AU 2018/2019. When she's not changing the world, she enjoys making tapestries, cooking, and seeing just how well various application stacks handle emoji.
+---
+twitter: glasnt
+---
+title: Turning 'wat' into 'why'
+---
+audience_level: Intermediate
+---
+abstract:
+
+When using a programming language for the first time, a new developer coming across a bugbear may state: "Oh, this language is TERRIBLE. I HATE IT"
+ 
+Or: "Huh. I wonder why that is..."
+
+Take a trip along the latter path through a dozen different languages and understand why things the way they are.

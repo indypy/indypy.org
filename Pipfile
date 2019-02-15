@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+
+[packages]
+lektor = "*"
+pyjade = "*"
+webassets = "*"
+cssmin = "*"
+pip = "*"
+jsmin = "*"
+"jinja2" = "*"
+idna = "*"
+
+[requires]
+python_version = "3.6"

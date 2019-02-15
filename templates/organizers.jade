@@ -1,0 +1,24 @@
+extends "base.jade"
+
+block page_title
+    |{{ this.title }} &mdash; {{super()}}
+
+block body_class
+    |about
+    |organizers
+
+block main
+
+    .container
+
+        h1 {{ this.title }}
+
+        p.
+            {{ this.description.html }}
+
+        .item-list
+
+            {% set organizers = site.query('/automate/organizers').include_undiscoverable(True) %}
+            {% for organizer in organizers.order_by('position') %}
+            {% include "includes/organizer.jade" %}
+            {% endfor %}

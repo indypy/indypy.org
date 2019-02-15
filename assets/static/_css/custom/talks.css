@@ -1,0 +1,113 @@
+body.talks.talk-list .item-list {
+    text-align: center;
+}
+body.talks.talk-list .item {
+    display: inline-block;
+    width: 275px;
+    margin: 20px;
+    vertical-align: top;
+}
+body.talks.talk-list .item a {
+   text-decoration: none; 
+}
+body.talks.talk-list .headshot {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 500ms;
+}
+body.talks.talk-list .headshot.loaded {
+    opacity: 1;
+}
+body.talks.talk-list h3 {
+    margin-top: 2ex;
+    margin-bottom: 0;
+    text-transform: none;
+    letter-spacing: 0;
+}
+body.talks.talk-list h2 a,
+body.talks.talk-list h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+body.talks.talk-list .byline {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+body.talks.talk-list .abstract {
+    margin-top: 1ex;
+    text-align: left;
+}
+
+body.talks.talk-detail h1 {
+    margin-top: 2ex;
+    margin-bottom: 0;
+}
+body.talks.talk-detail .byline {
+    margin-bottom: 3ex;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+body.talks.talk-detail .abstract {
+    margin-top: 1ex;
+}
+body.talks.talk-detail .slides .video {
+    margin-top: 2ex;
+    margin-bottom: 3ex;
+}
+body.talks.talk-detail .headshot {
+    display: block;
+    float: right;
+    width: 275px;
+    height: 275px;
+    margin: 10px auto;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 500ms;
+}
+@media (min-width: 500px) {
+    body.talks.talk-detail .headshot {
+        float: right;
+        margin: 0 0 10px 10px;
+    }
+}
+body.talks.talk-detail .headshot.loaded {
+    opacity: 1;
+}
+body.talks.talk-detail .contact {
+    text-align: left;
+}
+body.talks.talk-detail .contact .fa {
+    display: inline-block;
+    width: 2em;
+}
+body.talks.talk-detail .contact a {
+    text-decoration: none;
+}
+body.talks.talk-detail .more {
+    clear: both;
+    padding: 6ex 0;
+    text-align: center;
+}
+
+body.talks.schedule #main h3 {
+    margin-top: 3ex;
+    text-transform: none;
+}
+body.talks.schedule .schedule-table {
+    width: 100%;
+}
+body.talks.schedule .schedule-table td.time {
+    width: 10em;
+}
+body.talks.schedule .schedule-table td > a {
+    display: block;
+    text-decoration: none;
+}
+body.talks.schedule .schedule-table .speaker {
+    font-weight: bold;
+}

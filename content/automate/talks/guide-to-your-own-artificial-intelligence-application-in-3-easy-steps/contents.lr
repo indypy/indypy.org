@@ -1,0 +1,22 @@
+_model: talk
+---
+_template: talk.jade
+---
+speaker: Norah Klintberg Sakal
+---
+bio: 
+
+I'm a 30-year-old self-taught data scientist and entrepreneur from Sweden living in San Francisco. Besides from the own startup, I'm working with a research team where we are applying artificial intelligence and machine learning capabilities on biomedical science to solve big health problems. My passion and mission is to use my engineering background in biotechnology to accelerate the development of new technologies that will help doctors to cure, prevent and manage diseases. 
+
+I’m eager to show just a how few lines of code can get you a whole application, end-to-end, and I'm passionate about encouraging and inspiring people to come up with new ideas on implementing data science on their own day-to-day problems by sharing my journey.
+
+---
+website: https://www.linkedin.com/in/norah-klintberg-sakal-5b81322a/
+---
+title: Guide to your own artificial intelligence application in 3 easy steps
+---
+audience_level: Beginner
+---
+abstract: 
+
+What do you think of when you hear “artificial intelligence”? Perhaps self-driving cars, autonomous robots and Siri, Alexa or Google Home? But it doesn’t have to be that complex. You can build a powerful image classification model within a topic that inspires and interests you - with 3 easy steps.

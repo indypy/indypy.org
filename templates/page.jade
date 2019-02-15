@@ -1,0 +1,12 @@
+extends "base.jade"
+
+block page_title
+    |{{ this.title }} &mdash; {{super()}}
+
+block body_class
+    |content
+
+block main
+    .container
+        block main_body
+            {{ this.body.html }}

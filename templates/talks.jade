@@ -1,0 +1,34 @@
+extends "base.jade"
+
+block page_title
+    |{{ this.title }} &mdash; {{super()}}
+
+block body_class
+    |talks
+    |talk-list
+
+block main
+
+    .container
+        {{ this.description.html }}
+
+        .item-list
+            {% for talk in site.query('/talks') %}
+            .item
+                a(href="{{ talk|url }}")
+                    {% set headshot = talk.attachments.get('headshot.jpg') %}
+                    {% if headshot %}
+                    .headshot.image.bg-contain(
+                        ff-bg="{{ headshot.thumbnail(200)|url }}",
+                        ff-bg-2x="{{ headshot.thumbnail(400)|url }}"
+                    )
+                    {% else %}
+                    .headshot.image.bg-contain(
+                        ff-bg="/static/images/headshot.png",
+                        ff-bg-2x="/static/images/headshot.png",
+                    )
+                    {% endif %}
+
+                    h3 {{ talk.title }}
+                    .byline {{ talk.speaker }}
+            {% endfor %}

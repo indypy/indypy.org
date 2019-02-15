@@ -1,0 +1,8 @@
+body.speakers h2,
+body.speakers h3 {
+    margin-bottom: 0;
+}
+body.speakers h2 a,
+body.speakers h3 a {
+    text-decoration: none;
+}
