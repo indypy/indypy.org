@@ -8,13 +8,6 @@ body {
     position: relative;
     min-height: 100%;
 }
-footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    overflow: hidden;
-}
 
 /* Footer sponsor logo stuff */
 footer .sponsor-logos-footer {
@@ -662,11 +655,6 @@ footer .links li a:hover {
     font-size: 1.3rem;
 }
 
-#sponsors .sponsor-logos .item.diamond .logo,
-#sponsors .sponsor-logos .item.diamond_npo .logo {
-    height: 250px;
-}
-
 #sponsors .sponsor-logos .item.title .logo,
 #sponsors .sponsor-logos .item.title_npo .logo {
     width: 250px;
@@ -678,10 +666,21 @@ footer .links li a:hover {
     height: 150px;
 }
 
-#sponsors .sponsor-logos .item.silver .logo,
-#sponsors .sponsor-logos .item.silver_npo .logo{
+#sponsors .sponsor-logos .item.platinum .logo,
+#sponsors .sponsor-logos .item.platinum_npo .logo {
+    height: 250px;
+}
+
+#sponsors .sponsor-logos .item.gold .logo,
+#sponsors .sponsor-logos .item.gold_npo .logo{
     width: 150px;
     height: 90px;
+}
+
+#sponsors .sponsor-logos .item.bronze .logo,
+#sponsors .sponsor-logos .item.bronze_npo .logo{
+    width: 100px;
+    height: 60px;
 }
 
 #sponsors .sponsor-logos .item a {
