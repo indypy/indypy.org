@@ -75,6 +75,9 @@ html
                         li.youtube
                             a(href="{{ bag('settings.YOUTUBE_URL') }}", target="_blank")
                                 |#[i.fa.fa-youtube] IndyPy
+                        li.github
+                            a(href="{{ bag('settings.GITHUB_URL') }}", target="_blank")
+                                |#[i.fa.fa-github] IndyPy
 
                     block logos
                         {% include "includes/sponsor_logos_smol.jade" %}
