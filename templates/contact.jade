@@ -1,0 +1,61 @@
+extends "base.jade"
+
+block page_title
+    |Contact &mdash; {{super()}}
+
+block body_class
+    |contact
+
+block main
+    .container
+        .row
+            div(class='two-thirds column')
+                form(name='contact',
+                     class='contact',
+                     id='contact',
+                     method='POST',
+                     onsubmit='return validateMyForm();',
+                     netlify)
+                    label(for='name')
+                        | Name*
+                    input(type='text', name='name', id='name', class='u-full-width')
+                    label(for='title')
+                        | Title
+                    input(type='text', name='title', id='title', class='u-full-width')
+                    label(for='company')
+                        | Company
+                    input(type='text', name='company', id='company', class='u-full-width')
+                    label(for='subject')
+                        | Subject*
+                    input(type='text', name='subject', id='subject', class='u-full-width')
+                    label(for='message')
+                        | Message*
+                    textarea(name='message', id='message', class='u-full-width')
+                    input(type='submit', value='Submit', class='button-primary')
+
+block bottom
+    script.
+        function validateMyForm() {
+            var values = {
+                'name': document.getElementById('name'),
+                'subject': document.getElementById('subject'),
+                'message': document.getElementById('message'),
+            }
+            const entries = Object.entries(values)
+            for (const [id, el] of entries) {
+                values[id].classList.remove('required');
+            }
+            var missing = [];
+            for (const [id, el] of entries) {
+                if (!el.value) {
+                    missing.push(id);
+                    values[id].classList.add('required');
+                }
+            }
+            if (missing.length) {
+                values[missing[0]].focus();
+                return false;
+            } else {
+                return true;
+            }
+        }

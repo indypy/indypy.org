@@ -105,6 +105,33 @@ label {
     outline: none;
 }
 
+.button-primary {
+    background-color: #0E0E9A;
+}
+
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  background-color: #0E0E9A;
+  border-color: #0E0E9A;
+  transition: all .5s; }
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  background-color: #1010E9;
+  border-color: #1010E9;
+  transition: all .5s; }
+
+
 @media (min-width: 750px) {
     body {
         font-size: 2rem;
@@ -801,4 +828,14 @@ body.error #main {
 .footnote {
     font-size: 1.5rem;
     color: #7100FF;
+}
+
+.contact input,
+.contact textarea {
+    margin-bottom: .5em;
+}
+
+input.required,
+textarea.required {
+    background-color: #ffb2b3;
 }
