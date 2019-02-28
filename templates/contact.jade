@@ -15,6 +15,7 @@ block main
                      id='contact',
                      method='POST',
                      onsubmit='return validateMyForm();',
+                     netlify-honeypot='contact',
                      netlify)
                     label(for='name')
                         | Name*
@@ -31,6 +32,10 @@ block main
                     label(for='message')
                         | Message*
                     textarea(name='message', id='message', class='u-full-width')
+                    .contact-special
+                        label(for='contact_special')
+                            | Contact
+                        input(type='text', name='contact_special', id='contact_special')
                     input(type='submit', value='Submit', class='button-primary')
 
 block bottom

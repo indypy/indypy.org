@@ -839,3 +839,7 @@ input.required,
 textarea.required {
     background-color: #ffb2b3;
 }
+
+.contact-special {
+    display: none;
+}
