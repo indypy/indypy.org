@@ -44,12 +44,12 @@ body.about.organizers .biography {
     text-align: left;
     font-size: 0.8em;
 }
-body.about.organizers .contact {
+body.about.organizers .contact-methods {
     margin-top: 1.5em;
     text-align: center;
     font-size: 0.8em;
 }
-body.about.organizers .contact .fa {
+body.about.organizers .contact-methods .fa {
     color: white;
     padding-top: 15px;
     height: 50px;
@@ -57,16 +57,15 @@ body.about.organizers .contact .fa {
     text-align: center;
     text-decoration: none;
 }
-body.about.organizers .contact a {
+body.about.organizers .contact-methods a {
     display: inline-block;
-    background: #7100FF;
-    opacity: 0.7;
+    background: #0E0E9A;
     width: 60px;
     height: 60px;
     border-radius: 100%;
     line-height: 50px;
     margin-right: 10px;
 }
-body.about.organizers .contact a:hover {
-    opacity: 0.5;
+body.about.organizers .contact-methods a:hover {
+    opacity: 0.7;
 }
