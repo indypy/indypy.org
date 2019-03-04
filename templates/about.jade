@@ -16,7 +16,9 @@ block main
             .inner
                 .container
                     .row.fade-up(in-view)
-                        .one-half.column
+                        .one-third.column
                             h2 {{ this. title }}
-                        .one-half.column
+                            img(src='/static/images/logo.png',
+                                class='u-max-full-width')
+                        .two-thirds.column
                             {{ this.body.html }}

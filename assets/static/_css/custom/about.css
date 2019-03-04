@@ -1,3 +1,7 @@
+body.about #main section .main {
+    height: auto;
+}
+
 body.about section#intro .overlay {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
 }
