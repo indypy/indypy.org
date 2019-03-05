@@ -7,13 +7,25 @@ block main
 
     section#intro
         .background(du-parallax, y="animator")
-            .image.bg-cover(ff-bg="/static/backgrounds/conference-room.jpg")
+            .image.bg-cover(ff-bg="/static/backgrounds/conference-room-3.jpg")
         .overlay
         .main.vcontainer
             .inner
-                .logo.bg-contain(ff-bg="/static/images/logo.png")
-                .dates.
-                    March 22, 2019
+                a.event-box(href='https://2019.indypy.org/automate')
+                    img.u-max-full-width(src='/static/images/automate-logo.png')
+                    | <br>March 22, 2019
+                    | <br>Register Here
+                .event-box
+                    p
+                        | Python on the Web Conf
+                        | <br>June 6-7, 2019
+                        | <br>Save the Date
+                .event-box
+                    p
+                        | PyData Indy
+                        | <br>October 11, 2019
+                        | <br>Save the Date
+
         a.down(ng-click="scrollTo('welcome')")
             {% include "includes/chevron-down.svg" %}
 

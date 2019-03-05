@@ -24,20 +24,63 @@ body.home header nav > ul > li.home {
 body.home #intro {
     color: #FFF;
 }
+@media (max-width: 1200px) {
+    body.home #main section#intro .main {
+        height: auto;
+    }
+}
+
 body.home #intro .overlay {
     background-image: linear-gradient(rgba(91, 91, 30, 0.4), rgba(0, 0, 0, 0.8));
 }
-body.home #intro .main .logo {
-    width: 80vw;
-    height: 80vh;
+
+body.home #intro .inner {
+    display: flex;
     margin: 0 auto;
+    max-width: 1200px;
 }
-@media (min-width: 750px) {
-    body.home #intro .main .logo {
-        width: 50vw;
-        height: 50vh;
+@media (max-width: 1200px) {
+    body.home #intro .inner {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
+
+body.home #intro .event-box {
+    border: 2px solid rgba(255,255,255,0);
+    border-radius: 10px;
+    color: #fff;
+    display: block;
+    flex: 0 0 50%;
+    font-size: 1em;
+    font-weight: 900;
+    line-height: 1.2em;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+body.home #intro a.event-box:hover {
+    border-color: rgba(255,255,255,0.5);
+}
+body.home #intro div.event-box {
+    background-color: rgba(255,255,255,0.3)
+}
+body.home #intro .event-box p {
+    margin-bottom: 0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+@media (min-width: 1200px) {
+    body.home #intro .event-box {
+        flex: 1 1 33%;
+        font-size: 1.5em;
+    }
+}
+
 
 body.home #welcome {
     background-color: #0E0E9A;
@@ -206,16 +249,4 @@ body.home #newsletter a:hover {
 section#intro {
     background: linear-gradient(rgb(0, 0, 0), rgb(42, 42, 42));
     color: #FFF;
-}
-
-body.home #intro .dates {
-    font-size: 4vw;
-    font-weight: 900;
-    text-align: center;
-}
-
-@media (min-width: 1200px) {
-    body.home #intro .dates {
-        font-size: 2.2em;
-    }
 }
