@@ -134,13 +134,11 @@ body.home #newsletter .row {
     margin-bottom: 2em;
     text-align: center;
 }
-body.home #newsletter .one-half {
-    padding: 1em;
-    padding: 1em;
-}
-
 body.home #newsletter .main {
     text-align: center;
+}
+body.home #newsletter .main a {
+    color: #fff;
 }
 body.home #newsletter .main input {
     background: #000;
@@ -162,6 +160,10 @@ body.home #newsletter .main .button {
     body.home #newsletter .main button {
         max-width: 20%;
     }
+}
+
+body.home #newsletter .main .container {
+    max-width: none;
 }
 
 body.home #newsletter .social .fa {
@@ -192,6 +194,11 @@ body.home #newsletter .social a {
 }
 body.home #newsletter a:hover {
     opacity: 0.5;
+}
+
+.indyhackers-logo {
+    position: relative;
+    transform: translateY(-25%);
 }
 
 /* TEMP */

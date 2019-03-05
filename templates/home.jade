@@ -61,15 +61,15 @@ block main
                             ) Join IndyPy
 
                     .row
-                        .one-third.column.social
-                            a.indypy-icon(
+                        .three.columns.social
+                            a(
                                 href="{{ bag('settings.TWITTER_URL') }}",
                                 target="_blank"
                             ).
                                 #[i.fa.fa-2x.fa-twitter]
                             | You can also follow us.
 
-                        .one-third.column.social
+                        .three.columns.social
                             a(
                                 href="{{ bag('settings.YOUTUBE_URL') }}",
                                 target="_blank"
@@ -77,7 +77,7 @@ block main
                                 #[i.fa.fa-2x.fa-youtube]
                             | Or watch our videos.
 
-                        .one-third.column.social
+                        .three.columns.social
                             a(
                                 href="{{ bag('settings.SLACK_URL') }}",
                                 target="_blank"
@@ -85,6 +85,28 @@ block main
                                 #[i.fa.fa-2x.fa-slack]
 
                             | Or join our Slack team.
+
+                        .three.columns.social
+                            a(
+                                href="{{ bag('settings.GITHUB_URL') }}",
+                                target="_blank"
+                            ).
+                                #[i.fa.fa-2x.fa-github]
+
+                            | Or checkout our code.
+
+                    .row
+                        .two.columns
+                            &nbsp;
+                        .six.columns
+                            p(style='text-align: right')
+                             | Looking for a job? Check out the
+                             | <a href='http://www.indyhackers.org/jobs' target="_blank">Indy Hackers Job Board</a>
+                        .one.column
+                            a(href='http://www.indyhackers.org/jobs',
+                              target="_blank")
+                                img(src='/static/images/indyhackers-logo.png', class='u-max-full-width indyhackers-logo')
+
 
     section#sponsors
         .main.vcontainer
