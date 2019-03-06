@@ -244,6 +244,10 @@ body.home #newsletter a:hover {
     transform: translateY(-25%);
 }
 
+#meetups .fallback a {
+    color: #fff;
+}
+
 /* TEMP */
 
 section#intro {

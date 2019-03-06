@@ -37,22 +37,25 @@ block main
                 .container
                     .row.fade-up(in-view)
                         .one-half.column
-                            h2 2019 &mdash; Fishers
+                            h2 RSVP to our<br>next Meetup
+
+                            p.
+                                Our monthly Meetups are at the following locations:
+
+                            p.
+                                IndyPy Mixers
+                                <br>Main Event Entertainment
+                                <br>4016 E 82nd St, Indianapolis, IN 46250
+
+                            p.
+                                IndyPy Bytes
+                                <br>The District Tap
+                                <br>3720 E 82nd St, Indianapolis, IN 46240
+
                         .one-half.column
-                            p.
-                                IndyPy Conf kicks off the 2019 conference series
-                                with a full day of talks on Automation, Orchestration
-                                and IoT using Python.
-                            p.
-                                Organized by Six Feet Up, the Indianapolis Python Meetup
-                                (“IndyPy”) is a leading national group promoting the Python
-                                programming language and connecting the Python community.
-                                IndyPy draws Python enthusiasts from the entire Midwest for
-                                regular events. In 2018, the group celebrated 11 years of
-                                success with over 1,500 members.
-                            h3.caps.
-                                March 22nd, 2019#[br]
-                                Fishers, IN USA
+                            #meetups
+                                p.fallback.
+                                    Visit our <a href="{{ bag('settings.MEETUP_URL') }}" target="_blank">Meetup page</a> to see upcoming events.
 
     section#newsletter
         .background(du-parallax, y="animator")
@@ -68,7 +71,7 @@ block main
 
                         p
                             a.button.join(
-                                href="https://www.meetup.com/indypy/",
+                                href="{{ bag('settings.MEETUP_URL') }}",
                                 target="_blank"
                             ) Join IndyPy
 
