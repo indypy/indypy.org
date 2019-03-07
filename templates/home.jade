@@ -128,3 +128,33 @@ block main
             .inner
                 .container
                     {% include "/includes/sponsor_logos.jade" %}
+
+append bottom
+    script.
+        var events_url = "https://api.meetup.com/indypy/events?photo-host=public&page=3&sig_id=275961002&status=upcoming&sig=63eac6ed67713fd0d2f2a59ee72102eccaf7907f&callback=myJsonpCallback";
+
+        var scriptEl = document.createElement('script');
+        scriptEl.setAttribute('src', events_url);
+        document.body.appendChild(scriptEl);
+
+        window.myJsonpCallback = function(data) {
+            console.log(data.data)
+            var html = '';
+            data.data.forEach(function(event) {
+                var event_date = moment(event.local_date + " " + event.local_time);
+                html += '<div class="meetup-event">' +
+                        '<h4>' + event_date.format('MMMM D, YYYY') + ' &bull; '+ event_date.format('h:mm a') +'</h4>' +
+                        '<a href="' + event.link + '" target="_blank">' + event.name + '</a>\n';
+                if (event.venue && event.venue.name) {
+                    html += '<br><span class="meetup-venue">' + event.venue.name;
+                    if (event.venue.city) {
+                        html += ' &bull; ' + event.venue.city;
+                    }
+                    html += '</span>';
+                }
+                html += '</div>\n';
+            });
+            var meetups = document.getElementById('meetups');
+            meetups.innerHTML = html;
+        };
+
