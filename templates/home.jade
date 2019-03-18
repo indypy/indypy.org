@@ -32,7 +32,7 @@ block main
             .inner
                 .container
                     .row.fade-up(in-view)
-                        .one-half.column
+                        .five.columns
                             h2 RSVP to our<br>next Meetup
 
                             p.
@@ -48,7 +48,7 @@ block main
                                 <br>The District Tap
                                 <br>3720 E 82nd St, Indianapolis, IN 46240
 
-                        .one-half.column
+                        .seven.columns
                             #meetups
                                 p.fallback.
                                     Visit our <a href="{{ bag('settings.MEETUP_URL') }}" target="_blank">Meetup page</a> to see upcoming events.
@@ -138,7 +138,10 @@ append bottom
             var html = '';
             data.data.forEach(function(event) {
                 var event_date = moment(event.local_date + " " + event.local_time);
-                html += '<div class="meetup-event">' +
+                html += '<div class="meetup-event clearfix">' +
+                        '<div class="rsvp"><div class="text">Are you going?</div>' +
+                        '<button class="rsvp-choice" type="button" id="rsvp-yes" data-eventid="'+ event.id +'">Yes</button>' +
+                        '<button class="rsvp-choice" type="button" id="rsvp-no" data-eventid="'+ event.id +'">No</button></div>' +
                         '<h4>' + event_date.format('MMMM D, YYYY') + ' &bull; '+ event_date.format('h:mm a') +'</h4>' +
                         '<a href="' + event.link + '" target="_blank">' + event.name + '</a>\n';
                 if (event.venue && event.venue.name) {
@@ -152,5 +155,13 @@ append bottom
             });
             var meetups = document.getElementById('meetups');
             meetups.innerHTML = html;
+
+            var rsvpButtons = document.getElementsByClassName("rsvp-choice");
+            for (let button of rsvpButtons) {
+                button.addEventListener('click', function(e){
+                    event = e.currentTarget.getAttribute('data-eventid');
+                    
+                });
+            }
         };
 

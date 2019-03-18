@@ -260,6 +260,33 @@ body.home #newsletter a:hover {
     font-size: 0.8em;
 }
 
+.rsvp {
+    float: right;
+    text-align: center;
+    width: 190px;
+}
+
+.rsvp .text {
+    font-size: .8em;
+}
+
+.rsvp button {
+    border: 1px solid #fff;
+    color: #fff;
+    margin: 3px 2px;
+}
+
+.rsvp button:hover,
+.rsvp button.selected {
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #0E0E9A;
+}
+
+.rsvp button.selected {
+    cursor: default;
+}
+
 /* TEMP */
 
 section#intro {
