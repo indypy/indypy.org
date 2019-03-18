@@ -397,6 +397,7 @@ header nav {
     background-repeat: no-repeat;
 }
 #main section .main {
+    padding-bottom: 150px;
     position: relative;
     height: 100vh;
 }
@@ -406,19 +407,34 @@ header nav {
 #main section .main h2 {
     font-size: 3.2rem;
 }
+@media (min-width: 540px) {
+    #main section .main {
+        padding-bottom: 100px;
+    }
+}
+@media (min-width: 1200px) {
+    #main section .main {
+        padding-bottom: 0;
+    }
+}
 @media (min-width: 750px) {
     #main section .main h2 {
         font-size: 4.0rem;
     }
 }
-#main section .down {
-    display: block;
+
+#main section .advance {
     position: absolute;
     bottom: 10px;
+    width: 100%;
+}
+#main section .down {
+    display: block;
     left: 50%;
     width: 32px;
     height: 32px;
     margin-left: -16px;
+    position: relative;
 }
 #main section .down svg {
     width: 100%;

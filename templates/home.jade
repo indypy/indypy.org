@@ -26,8 +26,10 @@ block main
                         | <br>October 11, 2019
                         | <br>Save the Date
 
-        a.down(ng-click="scrollTo('welcome')")
-            {% include "includes/chevron-down.svg" %}
+        .advance
+            h1(style='margin-top: 50px; text-align: center; width: 100%') Check out our upcoming Meetups
+            a.down(ng-click="scrollTo('welcome')")
+                {% include "includes/chevron-down.svg" %}
 
     section#welcome
         .background
