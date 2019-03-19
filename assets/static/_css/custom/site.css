@@ -40,6 +40,14 @@ footer .sponsor-logos-footer a img {
     width: 100%;
 }
 
+.thanks {
+    font-size: .8em;
+}
+.thanks a,
+.thanks a:hover {
+    color: #fff;
+}
+
 /* Prevent side scrolling */
 
 #page {
