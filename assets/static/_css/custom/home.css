@@ -63,7 +63,7 @@ body.home #intro .event-box {
 body.home #intro a.event-box:hover {
     border-color: rgba(255,255,255,0.5);
 }
-body.home #intro div.event-box {
+body.home #intro .event-box.event-over {
     background-color: rgba(255,255,255,0.3)
 }
 body.home #intro .event-box p {
