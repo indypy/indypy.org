@@ -100,6 +100,7 @@ class JadeTemplatePlugin(Plugin):
         ))
 
         webasset_env.register('js_bundle', Bundle(
+            "_js/misc/picoModal.js",
             "_js/misc/moment.min.js",
             "_js/misc/modernizr.js",
             "_js/angular/angular.js",
