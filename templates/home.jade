@@ -130,21 +130,88 @@ block main
 
 append bottom
     script.
+        // upcoming events and rsvps
+
+        // - set up some helper utils
+        function addEvent(el, type, handler) {
+            if (el.attachEvent) el.attachEvent('on'+type, handler); else el.addEventListener(type, handler);
+        }
+        function hasClass(el, className) {
+            return el.classList ? el.classList.contains(className) : new RegExp('\\b'+ className+'\\b').test(el.className);
+        }
+        function addClass(el, className) {
+            if (el.classList) el.classList.add(className);
+            else if (!hasClass(el, className)) el.className += ' ' + className;
+        }
+
+        function removeClass(el, className) {
+            if (el.classList) el.classList.remove(className);
+            else el.className = el.className.replace(new RegExp('\\b'+ className+'\\b', 'g'), '');
+        }
+        function getSiblings(el, filter) {
+            var siblings = [];
+            el = el.parentNode.firstChild;
+            do { if (!filter || filter(el)) siblings.push(el); } while (el = el.nextSibling);
+            return siblings;
+        }
+        function createCookie(name,value,seconds) {
+            if (seconds) {
+                var date = new Date();
+                date.setTime(date.getTime()+(seconds*1000));
+                var expires = "; expires="+date.toGMTString();
+            }
+            else var expires = "";
+            document.cookie = name+"="+value+expires+"; path=/";
+        }
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0;i < ca.length;i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+            }
+            return null;
+        }
+
+        // - create some starting variables
         var events_url = "https://api.meetup.com/indypy/events?photo-host=public&page=3&sig_id=275961002&status=upcoming&sig=63eac6ed67713fd0d2f2a59ee72102eccaf7907f&callback=myJsonpCallback";
 
+        var access_token = readCookie("access_token");
+        if (!access_token) {
+            var CONSUMER_KEY = "cii3vpkjrcfoiv98f6rpprkhje";
+            var CONSUMER_REDIRECT_URI = "http://f82268ca.ngrok.io";
+            var meetup_auth_url = "https://secure.meetup.com/oauth2/authorize?client_id=" + CONSUMER_KEY + "&response_type=token&redirect_uri=" + CONSUMER_REDIRECT_URI;
+
+            var url_fragment = window.location.hash.substring(1);
+            var url_params = {};
+            if (url_fragment) {
+                params = url_fragment.split("&");
+                params.forEach(function(item) {
+                    var pair = item.split("=");
+                    if (pair.length===2) {
+                        url_params[pair[0]] = pair[1];
+                    }
+                });
+            }
+            if (url_params['access_token']) {
+                createCookie('access_token', url_params['access_token'], Number(url_params['expires_in']));
+            }
+        }
+
+        // - display the next three events on the page with rsvp buttons
         var scriptEl = document.createElement('script');
         scriptEl.setAttribute('src', events_url);
         document.body.appendChild(scriptEl);
 
         window.myJsonpCallback = function(data) {
-            console.log(data.data)
             var html = '';
             data.data.forEach(function(event) {
                 var event_date = moment(event.local_date + " " + event.local_time);
                 html += '<div class="meetup-event clearfix">' +
                         '<div class="rsvp"><div class="text">Are you going?</div>' +
-                        '<button class="rsvp-choice" type="button" id="rsvp-yes" data-eventid="'+ event.id +'">Yes</button>' +
-                        '<button class="rsvp-choice" type="button" id="rsvp-no" data-eventid="'+ event.id +'">No</button></div>' +
+                        '<button class="rsvp-choice" type="button" data-selected="no" data-response="yes" data-eventid="'+ event.id +'">Yes</button>' +
+                        '<button class="rsvp-choice" type="button" data-selected="no" data-response="no" data-eventid="'+ event.id +'">No</button></div>' +
                         '<h4>' + event_date.format('MMMM D, YYYY') + ' &bull; '+ event_date.format('h:mm a') +'</h4>' +
                         '<a href="' + event.link + '" target="_blank">' + event.name + '</a>\n';
                 if (event.venue && event.venue.name) {
@@ -161,9 +228,42 @@ append bottom
 
             var rsvpButtons = document.getElementsByClassName("rsvp-choice");
             for (let button of rsvpButtons) {
-                button.addEventListener('click', function(e){
-                    event = e.currentTarget.getAttribute('data-eventid');
-                    
+                addEvent(button, "click", function() {
+                    if (!access_token) {
+                        picoModal({
+                            width: 320,
+                            content: "<p>You first need to allow us to communicate with your Meetup.com account.</p>" +
+                                "<p class='pico-footer'>" +
+                                "<button class='ok button-primary'>Ok</button>" +
+                                "<button class='cancel'>Cancel</button> " +
+                                "</p>"
+                        }).afterCreate(modal => {
+                            modal.modalElem().addEventListener("click", evt => {
+                                if (evt.target && evt.target.matches(".ok")) {
+                                    modal.close(true);
+                                } else if (evt.target && evt.target.matches(".cancel")) {
+                                    modal.close();
+                                }
+                            });
+                        }).afterClose((modal, event) => {
+                            if (event.detail) {
+                                window.location = meetup_auth_url
+                            }
+                        }).show();
+
+                    } else {
+                        // otherwise we can issue the rsvp request to meetup and manipulate the buttons on success
+                        var response = button.getAttribute('data-response');
+                        var sibling = getSiblings(button, function (el) {
+                            return hasClass(el, 'rsvp-choice') && el.getAttribute('data-response') !== response;
+                        })[0];
+
+                        // after success
+                        button.setAttribute('data-selected', 'yes');
+                        addClass(button, 'rsvp-'+response);
+                        sibling.setAttribute('data-selected', 'no');
+                        removeClass(sibling, 'rsvp-'+sibling.getAttribute('data-response'));
+                    }
                 });
             }
         };

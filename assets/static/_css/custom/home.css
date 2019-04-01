@@ -274,18 +274,45 @@ body.home #newsletter a:hover {
     border: 1px solid #fff;
     color: #fff;
     margin: 3px 2px;
+    padding: 0 8px;
+    text-align: center;
+    width: 60px;
 }
 
-.rsvp button:hover,
-.rsvp button.selected {
+.rsvp button:hover {
     background-color: #fff;
     border: 1px solid #fff;
     color: #0E0E9A;
 }
 
-.rsvp button.selected {
-    cursor: default;
+.rsvp .rsvp-choice.rsvp-yes {
+    background-color: #6E8B2D;
+    border-color: #6E8B2D;
 }
+
+.rsvp .rsvp-choice.rsvp-no {
+    background-color: #9C3F25;
+    border-color: #9C3F25;
+}
+
+.pico-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    padding: 0 20px 10px 0;
+    box-sizing: border-box;
+    margin: 0;
+    text-align: right;
+}
+.pico-footer .button-primary {
+    margin-right: 10px;
+}
+.pico-content > :first-child {
+    font-size: .8em;
+    margin-bottom: 50px;
+}
+
 
 /* TEMP */
 
