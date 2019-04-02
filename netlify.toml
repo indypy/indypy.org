@@ -2,3 +2,18 @@
   from = "/conduct"
   to = "/code-of-conduct"
   status = 301
+[[redirects]]
+from = "https://indypy.com/*"
+to = "https://indypy.org/:splat"
+status = 301
+force = true
+[[redirects]]
+from = "https://www.indypy.com/*"
+to = "https://indypy.org/:splat"
+status = 301
+force = true
+[[redirects]]
+from = "https://indypy.netlify.com/*"
+to = "https://indypy.org/:splat"
+status = 301
+force = true
