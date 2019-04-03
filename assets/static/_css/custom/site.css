@@ -867,3 +867,21 @@ textarea.required {
 .contact-special {
     display: none;
 }
+
+.archives .box {
+    text-align: center;
+}
+
+.archives .box img {
+    max-width: 100%;
+}
+
+.archives .box a {
+    border-radius: 10px;
+    display: block;
+    padding: 5px;
+}
+
+.archives .box a:hover {
+    background-color: #0e0e9a;
+}

@@ -1,0 +1,20 @@
+extends "base.jade"
+
+block page_title
+    |{{ this.title }} &mdash; {{super()}}
+
+block body_class
+    |archives
+
+block main
+
+    .container
+        .row
+            h1 {{ this.title }}
+        .row
+            h2 2019
+        .row
+            .three.columns.box
+                a(href="https://2019.indypy.org/automate", target="_blank")
+                    img(src="/static/images/automate-logo.png")
+                p March 22, 2019
