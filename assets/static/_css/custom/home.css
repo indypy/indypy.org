@@ -96,7 +96,16 @@ body.home #welcome .talks-link {
     color: inherit;
     font-weight: bold;
 }
-
+@media screen and (max-width: 500px) {
+    body.home #welcome .main {
+        min-height: 890px;
+    }
+}
+@media screen and (min-width: 501px) and (max-width:767px) {
+    body.home #welcome .main {
+        min-height: 500px;
+    }
+}
 body.home #speakers {
     color: #161616;
 }
@@ -186,6 +195,12 @@ body.home #newsletter .row {
 body.home #newsletter .main {
     text-align: center;
 }
+@media screen and (min-width: 501px) and (max-width:767px) {
+    body.home #newsletter .main {
+        min-height: 570px;
+    }
+}
+
 body.home #newsletter .main a {
     color: #fff;
 }
