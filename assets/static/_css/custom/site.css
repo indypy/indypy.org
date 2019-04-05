@@ -19,7 +19,6 @@ footer .sponsor-logos-footer ol {
     display: flex;
     align-items: center;
 }
-
 footer .sponsor-logos-footer li {
     flex-grow: 1;
     flex-shrink: 1;
@@ -39,6 +38,22 @@ footer .sponsor-logos-footer li:nth-of-type(3) {
 footer .sponsor-logos-footer a img {
     width: 100%;
 }
+@media screen and (max-width: 767px) {
+    footer .sponsor-logos-footer ol {
+        flex-direction: column;
+    }
+    footer .sponsor-logos-footer li {
+        max-width: 50%;
+        margin-bottom: 20px;
+    }
+    footer .sponsor-logos-footer li:nth-of-type(1),
+    footer .sponsor-logos-footer li:nth-of-type(2),
+    footer .sponsor-logos-footer li:nth-of-type(3) {
+        max-width: 75%;
+    }
+}
+
+
 
 .thanks {
     font-size: .8em;
