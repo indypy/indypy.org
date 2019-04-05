@@ -109,14 +109,13 @@ block main
                     .row
                         .two.columns
                             &nbsp;
-                        .six.columns
-                            p(style='text-align: right')
-                             | Looking for a job? Check out the
-                             | <a href='http://www.indyhackers.org/jobs' target="_blank">Indy Hackers Job Board</a>
-                        .one.column
-                            a(href='http://www.indyhackers.org/jobs',
-                              target="_blank")
-                                img(src='/static/images/indyhackers-logo.png', class='u-max-full-width indyhackers-logo')
+                        .eight.columns
+                            .job-board-text
+                             | Looking for a job? Check out the&nbsp;
+                             a(href='http://www.indyhackers.org/jobs', target="_blank")
+                                | Indy Hackers Job Board
+                             a(href='http://www.indyhackers.org/jobs', target="_blank", class="job-board-logo")
+                                 img(src='/static/images/indyhackers-logo.png')
 
 
     section#sponsors

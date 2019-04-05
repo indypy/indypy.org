@@ -209,6 +209,11 @@ body.home #newsletter .main .container {
     max-width: none;
 }
 
+@media screen and (max-width: 550px) {
+    body.home #newsletter .social {
+        margin-bottom: 20px;
+    }
+}
 body.home #newsletter .social .fa {
     color: black;
     font-size: 30px;
@@ -218,14 +223,6 @@ body.home #newsletter .social .fa {
     text-align: center;
     text-decoration: none;
 }
-body.home #newsletter .social .indypy-icon {
-    background-image: url("../images/indypy-bw-400.png");
-    background-size: cover;
-}
-body.home #newsletter .social .indypy-icon .fa {
-    visibility: hidden;
-}
-
 body.home #newsletter .social a {
     display: inline-block;
     background: white;
@@ -238,10 +235,39 @@ body.home #newsletter .social a {
 body.home #newsletter a:hover {
     opacity: 0.5;
 }
+@media screen and (max-width: 768px) {
+    body.home #newsletter .social a {
+        display: block;
+        margin: 0 auto;
+    }
+}
 
-.indyhackers-logo {
-    position: relative;
-    transform: translateY(-25%);
+.job-board-text {
+    float: left;
+    margin-bottom: 0;
+    text-align: right;
+}
+
+.job-board-logo {
+    display: inline-block;
+    float: right;
+    margin-left: 20px;
+}
+
+.job-board-logo img {
+    width: 52px;
+}
+@media screen and (max-width: 1125px) {
+    .job-board-text {
+        float: none;
+        text-align: center;
+    }
+
+    .job-board-logo {
+        display: block;
+        float: none;
+        margin: 20px 0 auto;
+    }
 }
 
 #meetups a {
