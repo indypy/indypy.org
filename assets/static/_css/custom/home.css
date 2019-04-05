@@ -1,4 +1,4 @@
-@media (min-width: 750px) {
+@media screen and (min-width: 750px) {
     body.home header {
         background-color: transparent;
     }
@@ -24,9 +24,14 @@ body.home header nav > ul > li.home {
 body.home #intro {
     color: #FFF;
 }
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     body.home #main section#intro .main {
         height: auto;
+    }
+}
+@media screen and (min-width: 1200px) {
+    body.home #main section#intro .main {
+        min-height: 700px;
     }
 }
 
@@ -36,10 +41,11 @@ body.home #intro .overlay {
 
 body.home #intro .inner {
     display: flex;
+    justify-content: center;
     margin: 0 auto;
     max-width: 1200px;
 }
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     body.home #intro .inner {
         flex-wrap: wrap;
         justify-content: center;
@@ -74,9 +80,9 @@ body.home #intro .event-box p {
 }
 
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
     body.home #intro .event-box {
-        flex: 1 1 33%;
+        flex: 0 1 33%;
         font-size: 1.5em;
     }
 }
@@ -196,7 +202,7 @@ body.home #newsletter .main .button {
     text-align: center;
     text-transform: unset;
 }
-@media (min-width: 750px) {
+@media screen and (min-width: 750px) {
     body.home #newsletter .main input {
         max-width: 60%;
     }
