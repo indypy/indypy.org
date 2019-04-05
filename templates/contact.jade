@@ -15,11 +15,18 @@ block main
                      id='contact',
                      method='POST',
                      onsubmit='return validateMyForm();',
-                     netlify-honeypot='contact',
+                     netlify-honeypot='contact_special',
                      netlify)
                     label(for='name')
                         | Name*
                     input(type='text', name='name', id='name', class='u-full-width')
+                    label(for='email')
+                        | Email*
+                    input(type='text', name='email', id='email', class='u-full-width')
+                    p(id='email-warning') Invalid email address.
+                    label(for='phone')
+                        | Phone
+                    input(type='text', name='phone', id='phone', class='u-full-width')
                     label(for='title')
                         | Title
                     input(type='text', name='title', id='title', class='u-full-width')
@@ -41,8 +48,11 @@ block main
 block bottom
     script.
         function validateMyForm() {
+            var emailWarning = document.getElementById('email-warning');
+            emailWarning.style.display = '';
             var values = {
                 'name': document.getElementById('name'),
+                'email': document.getElementById('email'),
                 'subject': document.getElementById('subject'),
                 'message': document.getElementById('message'),
             }
@@ -60,7 +70,12 @@ block bottom
             if (missing.length) {
                 values[missing[0]].focus();
                 return false;
-            } else {
-                return true;
             }
+            var filter=/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
+            if (!filter.test(values['email'].value)) {
+                emailWarning.style.display = 'block';
+                values['email'].focus()
+                return false;
+            }
+            return true;
         }

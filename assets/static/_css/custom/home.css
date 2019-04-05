@@ -266,3 +266,10 @@ section#intro {
     background: linear-gradient(rgb(0, 0, 0), rgb(42, 42, 42));
     color: #FFF;
 }
+
+#email-warning {
+    color: #f00;
+    display: none;
+    font-size: .7em;
+    margin-top: -8px;
+}
