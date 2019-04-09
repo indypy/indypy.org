@@ -195,6 +195,11 @@ body.home #newsletter .row {
 body.home #newsletter .main {
     text-align: center;
 }
+@media screen and (max-width:500px) {
+    body.home #newsletter .main {
+        height: auto;
+    }
+}
 @media screen and (min-width: 501px) and (max-width:767px) {
     body.home #newsletter .main {
         min-height: 570px;
