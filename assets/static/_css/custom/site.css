@@ -805,14 +805,20 @@ footer .links li a:hover {
 
     #sponsors .sponsor-logos .item.organizer .logo,
     #sponsors .sponsor-logos .item.organizer_npo .logo {
-        width: 280px;
-        height: 80px;
+        width: 350px;
+        height: 180px;
     }
 
-    #sponsors .sponsor-logos .item.silver .logo,
-    #sponsors .sponsor-logos .item.silver_npo .logo {
-        width: 200px;
-        height: 40px;
+    #sponsors .sponsor-logos .item.gold .logo,
+    #sponsors .sponsor-logos .item.gold_npo .logo{
+        width: 150px;
+        height: 120px;
+    }
+
+    #sponsors .sponsor-logos .item.bronze .logo,
+    #sponsors .sponsor-logos .item.bronze_npo .logo{
+        width: 120px;
+        height: 100px;
     }
 
     .conduct-violations {
