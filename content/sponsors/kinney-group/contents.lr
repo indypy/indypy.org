@@ -2,6 +2,8 @@ _hidden: yes
 ---
 name: Kinney Group
 ---
+active: false
+---
 tier: title sponsor
 ---
 is_npo: false

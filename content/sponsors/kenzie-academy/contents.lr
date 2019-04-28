@@ -2,6 +2,8 @@ _hidden: yes
 ---
 name: Kenzie Academy
 ---
+active: true
+---
 tier: bronze
 ---
 is_npo: false

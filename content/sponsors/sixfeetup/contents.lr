@@ -2,6 +2,8 @@ _hidden: yes
 ---
 name: Six Feet Up
 ---
+active: true
+---
 tier: organizer
 ---
 is_npo: false

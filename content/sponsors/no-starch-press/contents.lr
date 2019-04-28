@@ -2,6 +2,8 @@ _hidden: yes
 ---
 name: No Starch Press, Inc
 ---
+active: true
+---
 tier: gold
 ---
 is_npo: false
