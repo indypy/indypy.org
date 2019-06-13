@@ -3,17 +3,21 @@
   to = "/code-of-conduct"
   status = 301
 [[redirects]]
-from = "https://indypy.com/*"
-to = "https://indypy.org/:splat"
-status = 301
-force = true
+  from = "https://indypy.com/*"
+  to = "https://indypy.org/:splat"
+  status = 301
+  force = true
 [[redirects]]
-from = "https://www.indypy.com/*"
-to = "https://indypy.org/:splat"
-status = 301
-force = true
+  from = "https://www.indypy.com/*"
+  to = "https://indypy.org/:splat"
+  status = 301
+  force = true
 [[redirects]]
-from = "https://indypy.netlify.com/*"
-to = "https://indypy.org/:splat"
-status = 301
-force = true
+  from = "https://indypy.netlify.com/*"
+  to = "https://indypy.org/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/pydatacfp"
+  to = "https://www.papercall.io/pydata-indy-2019"
+  status = 301
