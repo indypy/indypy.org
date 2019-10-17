@@ -4,8 +4,8 @@ title: About IndyPy
 ---
 background: /static/backgrounds/meeting-blurry.jpg
 ---
-<a href="https://www.meetup.com/indypy"> Sign Up for an upcoming Meetup here</a>
 body:
+<a href="https://www.meetup.com/indypy"> Sign Up for an upcoming Meetup here</a>
 
 The Indianapolis Python Meetup (“IndyPy”) is a leading national group promoting the Python programming
 language and connecting the Python community.
