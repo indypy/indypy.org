@@ -1,8 +1,0 @@
-_model: schedule
----
-_template: schedule.jade
----
-title: Conference Schedule
----
-description:
-
