@@ -20,7 +20,7 @@ html
         )
         meta(
             name="description",
-            content="Website for IndyPy Automate Conf ’19, a regional Python conference for automation in Fishers, IN USA."
+            content="Website for IndyPy, a regional Python Meetup in Indianapolis, IN USA."
         )
         meta(
             name="keywords",
@@ -29,7 +29,7 @@ html
         meta(property="og:url", content="http://2019.indypy.org")
         meta(
             property="og:description",
-            content="Website for IndyPy Automate Conf ’19, a regional Python conference for automation in Fishers, IN USA."
+            content="Website for IndyPy, a regional Python Meetup in Indianapolis, IN USA."
         )
         link(
             rel="stylesheet",
@@ -58,12 +58,12 @@ html
                         a.bg-contain.bg-ir(
                             href="",
                             ff-bg="/static/images/header-logo.png"
-                        ) IndyPy Automate Conf ’19
+                        ) IndyPy
                 {% include "includes/nav.jade" %}
 
             #main
                 block main
-            
+
             #banner
                 a(href="https://www.papercall.io/indypy", target="_blank")
                     strong Apply to#[br]Speak
@@ -109,4 +109,3 @@ html
             script.
                 var data = {};
                 indypy.start(data);
-
