@@ -52,17 +52,13 @@ html
                         a.bg-contain.bg-ir(
                             href="",
                             ff-bg="/static/images/aws-small.png"
-                        ) Indyaws
-                {% include "includes/nav.jade" %}
+                        ) IndyAWS
 
             #main
                 block main
 
             footer
                 .container
-                    block logos
-                        {% include "includes/sponsor_logos_smol.jade" %}
-
                     p.thanks Thanks to <a href="https://2019.pycascades.com/" target="_blank">PyCascades</a> for the website template used on this site!
 
             a#menu-trigger.bg-contain(
@@ -77,7 +73,6 @@ html
                     ff-bg="/static/images/close.svg",
                     ng-click="isMenuVisible=false"
                 )
-                {% include "includes/nav.jade" %}
 
         block bottom
             script.
