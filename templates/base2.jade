@@ -18,9 +18,9 @@ html
         )
         meta(
             name="keywords",
-            content="AWS,Cloud,Conference,Indianapolis,Fishers,Amazon Web Services"
+            content="AWS,Amazon Web Services,Conference,Indianapolis,Fishers,Cloud Services"
         )
-        meta(property="og:url", content="http://indyaws.com")
+        meta(property="og:url", content="http://2019.indypy.org")
         meta(
             property="og:description",
             content="Website for IndyAWS, a regional Amazon Web Services Meetup in Indianapolis, IN USA."
@@ -52,7 +52,32 @@ html
                         a.bg-contain.bg-ir(
                             href="",
                             ff-bg="/static/images/aws-small.png"
-                        ) IndyAWS
+                        ) Indyaws
+                {% include "includes/nav.jade" %}
+
+            #main
+                block main
+
+            footer
+                .container
+                    block logos
+                        {% include "includes/sponsor_logos_smol.jade" %}
+
+                    p.thanks Thanks to <a href="https://2019.pycascades.com/" target="_blank">PyCascades</a> for the website template used on this site!
+
+            a#menu-trigger.bg-contain(
+                ff-bg="/static/images/menu.svg",
+                ng-click="isMenuVisible=!isMenuVisible"
+            )
+            #menu.ng-cloak(
+                ng-show="isMenuVisible",
+                ng-click="isMenuVisible=false"
+            )
+                a.close.bg-contain(
+                    ff-bg="/static/images/close.svg",
+                    ng-click="isMenuVisible=false"
+                )
+                {% include "includes/nav.jade" %}
 
         block bottom
             script.
