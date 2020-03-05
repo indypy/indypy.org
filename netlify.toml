@@ -23,6 +23,6 @@
   status = 301
 [[redirects]]
   from = "/webconf"
-  to = "https://indypy.sixfeetup.com"
+  to = "https://indypy.sixfeetup.com/webconf"
   status = 200
   force = true
