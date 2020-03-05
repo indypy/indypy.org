@@ -21,3 +21,8 @@
   from = "/pydatacfp"
   to = "https://www.papercall.io/pydata-indy-2019"
   status = 301
+[[redirects]]
+  from = "/webconf"
+  to = "https://indypy.sixfeetup.com"
+  status = 200
+  force = true
