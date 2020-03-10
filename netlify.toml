@@ -23,6 +23,6 @@
   status = 301
 [[redirects]]
   from = "/webconf*"
-  to = "https://indypy.sixfeetup.com/VirtualHostBase/https/2020.indypy.org:443/IndyPy/VirtualHostRoot/_vh_webconf/:splat"
+  to = "https://indypy.sixfeetup.com/VirtualHostBase/https/2020.indypy.org:443/IndyPy/VirtualHostRoot/_vh_webconf:splat"
   status = 200
   force = true
