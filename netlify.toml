@@ -22,7 +22,7 @@
   to = "https://www.papercall.io/pydata-indy-2019"
   status = 301
 [[redirects]]
-  from = "/webconf*"
+  from = "/webconf/*"
   to = "https://indypy.sixfeetup.com/VirtualHostBase/https/2020.indypy.org:443/IndyPy/VirtualHostRoot/_vh_webconf:splat"
   status = 200
   force = true
