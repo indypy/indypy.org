@@ -14,12 +14,12 @@
   force = true
 [[redirects]]
   from = "http://pythonwebconference.com/*"
-  to = "https://indypy.org/webconf:splat"
+  to = "https://indypy.org/webconf:/splat"
   status = 301
   force = true
 [[redirects]]
   from = "https://pythonwebconference.com/*"
-  to = "https://indypy.org/webconf:splat"
+  to = "https://indypy.org/webconf/:splat"
   status = 301
   force = true
 [[redirects]]
