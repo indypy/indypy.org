@@ -23,6 +23,36 @@
   status = 301
   force = true
 [[redirects]]
+  from = "http://pythonwebconf.com/*"
+  to = "https://indypy.org/webconf/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://pythonwebconf.com/*"
+  to = "https://indypy.org/webconf/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "http://pythonwebconf.net/*"
+  to = "https://indypy.org/webconf/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://pythonwebconf.net/*"
+  to = "https://indypy.org/webconf/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "http://pythonwebconf.org/*"
+  to = "https://indypy.org/webconf/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://pythonwebconf.org/*"
+  to = "https://indypy.org/webconf/:splat"
+  status = 301
+  force = true
+[[redirects]]
   from = "https://indypy.netlify.com/*"
   to = "https://indypy.org/:splat"
   status = 301
