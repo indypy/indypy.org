@@ -13,46 +13,6 @@
   status = 301
   force = true
 [[redirects]]
-  from = "http://pythonwebconference.com/*"
-  to = "https://indypy.org/webconf/:splat"
-  status = 301
-  force = true
-[[redirects]]
-  from = "https://pythonwebconference.com/*"
-  to = "https://indypy.org/webconf/:splat"
-  status = 301
-  force = true
-[[redirects]]
-  from = "http://pythonwebconf.com/*"
-  to = "https://indypy.org/webconf/:splat"
-  status = 301
-  force = true
-[[redirects]]
-  from = "https://pythonwebconf.com/*"
-  to = "https://indypy.org/webconf/:splat"
-  status = 301
-  force = true
-[[redirects]]
-  from = "http://pythonwebconf.net/*"
-  to = "https://indypy.org/webconf/:splat"
-  status = 301
-  force = true
-[[redirects]]
-  from = "https://pythonwebconf.net/*"
-  to = "https://indypy.org/webconf/:splat"
-  status = 301
-  force = true
-[[redirects]]
-  from = "http://pythonwebconf.org/*"
-  to = "https://indypy.org/webconf/:splat"
-  status = 301
-  force = true
-[[redirects]]
-  from = "https://pythonwebconf.org/*"
-  to = "https://indypy.org/webconf/:splat"
-  status = 301
-  force = true
-[[redirects]]
   from = "https://indypy.netlify.com/*"
   to = "https://indypy.org/:splat"
   status = 301
@@ -63,6 +23,6 @@
   status = 301
 [[redirects]]
   from = "/webconf/*"
-  to = "https://indypy.sixfeetup.com/VirtualHostBase/https/2020.indypy.org:443/IndyPy/VirtualHostRoot/_vh_webconf/:splat"
-  status = 200
+  to = "https://2020.pythonwebconf.com/:splat"
+  status = 301
   force = true
