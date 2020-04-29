@@ -1,0 +1,20 @@
+_hidden: yes
+---
+name: JFrog
+---
+active: true
+---
+tier: bronze
+---
+is_npo: false
+---
+website: https://jfrog.com/
+---
+description:
+We set out on our journey in 2008, with the mission to transform the way enterprises manage and release software updates. We’ve realized that the world has changed, and users now expect their software to update continuously, non-intrusively and without them even knowing, this hyper connected world experience can be enabled by automation and an end-to-end solution for software artifacts only. With this in mind, we’ve developed the world’s first universal artifact management platform, ushering in a new era in DevOps – Continuous Updates. Ten years later, with thousands of customers, and millions of users globally, JFrog has become the “Database of DevOps” and de-facto standard in release and update management.
+---
+logo: jfrog.png
+---
+logo_dark_bg: jfrog.png
+---
+signed_on: 2019-04-22
