@@ -177,8 +177,8 @@ append bottom
         var access_token = readCookie("access_token");
         if (!access_token) {
             var CONSUMER_KEY = "cii3vpkjrcfoiv98f6rpprkhje";
-            var CONSUMER_REDIRECT_URI = "http://f82268ca.ngrok.io";
-            var meetup_auth_url = "https://secure.meetup.com/oauth2/authorize?client_id=" + CONSUMER_KEY + "&response_type=token&redirect_uri=" + CONSUMER_REDIRECT_URI;
+            var CONSUMER_REDIRECT_URI = "http://36e62f9d.ngrok.io/";
+            var meetup_auth_url = "https://secure.meetup.com/oauth2/authorize?client_id=" + CONSUMER_KEY + "&response_type=token&scope=rsvp&redirect_uri=" + CONSUMER_REDIRECT_URI;
 
             var url_fragment = window.location.hash.substring(1);
             var url_params = {};
@@ -193,6 +193,7 @@ append bottom
             }
             if (url_params['access_token']) {
                 createCookie('access_token', url_params['access_token'], Number(url_params['expires_in']));
+                access_token = url_params['access_token'];
             }
         }
 
@@ -205,7 +206,7 @@ append bottom
             var html = '';
             data.data.forEach(function(event) {
                 var event_date = moment(event.local_date + " " + event.local_time);
-                html += '<div class="meetup-event clearfix">' +
+                html += '<div class="meetup-event clearfix"><p>Access token? ' + access_token + '</p>' +
                         '<div class="rsvp"><div class="text">Are you going?</div>' +
                         '<button class="rsvp-choice" type="button" data-selected="no" data-response="yes" data-eventid="'+ event.id +'">Yes</button>' +
                         '<button class="rsvp-choice" type="button" data-selected="no" data-response="no" data-eventid="'+ event.id +'">No</button></div>' +
@@ -251,11 +252,19 @@ append bottom
                     } else {
                         // otherwise we can issue the rsvp request to meetup and manipulate the buttons on success
                         var response = button.getAttribute('data-response');
+                        var eventid = button.getAttribute('data-eventid');
+                        var rvsp_set_url = "https://api.meetup.com/indypy/events/" + eventid +
+                            "/rsvps?access_token=" + access_token +
+                            "&response=" + response;
+                        fetch(rvsp_set_url)
+                            .then(function(response){
+                                debugger;
+                            })
+
+                        // after success
                         var sibling = getSiblings(button, function (el) {
                             return hasClass(el, 'rsvp-choice') && el.getAttribute('data-response') !== response;
                         })[0];
-
-                        // after success
                         button.setAttribute('data-selected', 'yes');
                         addClass(button, 'rsvp-'+response);
                         sibling.setAttribute('data-selected', 'no');
