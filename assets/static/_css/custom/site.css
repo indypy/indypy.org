@@ -708,6 +708,13 @@ footer .links li a:hover {
     border-bottom: 2px solid #636363;
 }
 
+#sponsors .sponsor-logos .item-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
 #sponsors .sponsor-logos .item {
     display: inline-block;
     vertical-align: text-top;
@@ -721,6 +728,7 @@ footer .links li a:hover {
 }
 #sponsors .sponsor-logos .item p {
     font-size: 1.3rem;
+    margin-bottom: 1em;
 }
 
 #sponsors .sponsor-logos .item.title .logo,
@@ -766,6 +774,11 @@ footer .links li a:hover {
 /*}*/
 
 @media (min-width: 750px) {
+    #sponsors .sponsor-logos .item-list {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
     #sponsors .sponsor-logos .item {
         width: 480px;
         margin: 0 20px;
@@ -774,7 +787,7 @@ footer .links li a:hover {
     #sponsors .sponsor-logos .item > .logo {
         margin-right: auto;
         margin-left: auto;
-        margin-bottom: 2rem;
+        margin-top: 2rem;
     }
     #sponsors .sponsor-logos .item > p {
         margin: auto;
