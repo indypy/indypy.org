@@ -109,6 +109,7 @@ class JadeTemplatePlugin(Plugin):
             "_js/headroom/headroom.js",
             "_js/misc/instafeed.js",
             "_js/misc/ff.imghelpers.js",
+            "_js/misc/badge.js",
             "_js/custom/site.js",
             filters='jsmin',
             output="js/site.js",
