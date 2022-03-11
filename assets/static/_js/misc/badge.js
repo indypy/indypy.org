@@ -12,7 +12,8 @@ SWU__DOMReady(function() {
   }
 
   // Options
-  const url = SWU__currentScript.getAttribute('url');
+  // const url = SWU__currentScript.getAttribute('url');
+  const url = 'https://sixfeetup.com/company/we-stand-with-ukraine'
   const title = SWU__currentScript.getAttribute('title');
   // const position = SWU__currentScript.getAttribute('position');
   const position = 'right';
