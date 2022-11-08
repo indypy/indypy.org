@@ -11,7 +11,7 @@ block main
         .overlay
         .main.vcontainer
             .inner
-                a.event-box(href='https://meetingplace.io/indypy')
+                a.event-box(href="{{ bag('settings.MEETUP_URL') }}")
                     img.u-max-full-width(src='/static/images/indypylogo2.png')
                     | <br>RSVP for our Meetups Here
 
@@ -114,33 +114,29 @@ block main
 
 append bottom
     script.
-        var events_url = "https://meetingplace.io/api/v1/group/indypy/events";
+        var events_url = "https://api.meetup.com/indypy/events?photo-host=public&page=3&sig_id=275961002&status=upcoming&sig=63eac6ed67713fd0d2f2a59ee72102eccaf7907f&callback=myJsonpCallback";
 
-        fetch(events_url).then(response => response.json())
-            .then(result => {
-                if (result.error) {
-                    console.log('meetingplace api error: ', result.error);
-                } else {
-                    upcoming_events = result.slice(0,3);
-                    var html = '';
-                    upcoming_events.forEach(function(event) {
-                        var event_date = moment(event.start_time);
-                        html += '<div class="meetup-event">' +
-                                '<h4>' + event_date.format('MMMM D, YYYY') + ' &bull; '+ event_date.format('h:mm a') +'</h4>' +
-                                '<a href="' + event.url + '" target="_blank">' + event.name + '</a>\n';
-                        if (event.location) {
-                            html += '<br><span class="meetup-venue">' + event.location;
-                            if (event.location_info) {
-                                html += ' &bull; ' + event.location_info;
-                            }
-                            html += '</span>';
-                        }
-                        //if (event.description) {
-                        //    html += '<p class="meetup-abstract">' + event.description + '</p>';
-                        //}
-                        html += '</div>\n';
-                    });
-                    var meetups = document.getElementById('meetups');
-                    meetups.innerHTML = html;
+        var scriptEl = document.createElement('script');
+        scriptEl.setAttribute('src', events_url);
+        document.body.appendChild(scriptEl);
+
+        window.myJsonpCallback = function(data) {
+            // console.log(data.data)
+            var html = '';
+            data.data.forEach(function(event) {
+                var event_date = moment(event.local_date + " " + event.local_time);
+                html += '<div class="meetup-event">' +
+                        '<h4>' + event_date.format('MMMM D, YYYY') + ' &bull; '+ event_date.format('h:mm a') +'</h4>' +
+                        '<a href="' + event.link + '" target="_blank">' + event.name + '</a>\n';
+                if (event.venue && event.venue.name) {
+                    html += '<br><span class="meetup-venue">' + event.venue.name;
+                    if (event.venue.city) {
+                        html += ' &bull; ' + event.venue.city;
+                    }
+                    html += '</span>';
                 }
+                html += '</div>\n';
             });
+            var meetups = document.getElementById('meetups');
+            meetups.innerHTML = html;
+        };
