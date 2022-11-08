@@ -1,11 +1,13 @@
-# Website for PyCascades
+# Website for indypy.org
 
 🚨🚨🚨🚨 Pushing or merging to master will automatically deploy 🚨🚨🚨🚨
 
 Just a few notes on how to work with this setup for the website. The most
 important is that we are using the static site generator
 [Lektor](https://www.getlektor.com/) and are hosting the content on
-[Netlify](https://app.netlify.com/sites/2019-pycascades).
+[Netlify](https://app.netlify.com/sites/indypy).
+
+Repo is a copy from PyCascades
 
 ## Why Lektor?
 
@@ -29,8 +31,8 @@ here.
 Let's get you started with downloading the latest version of the repo:
 
 ```
-$ git clone git@github.com:pycascades/www.pycascades.com.git
-$ cd www.pycascades.com
+$ git clone git@github.com:indypy/indypy.org.git
+$ cd indypy.org
 ```
 
 Lektor needs Python (I think we all do 😉). This means you'll have to setup a
@@ -69,7 +71,6 @@ the dev server. You should clear the built cache and start the service again:
 $ lektor clean -yes && lektor server
 ```
 
-Also let Seb know that he needs to fix this 😇.
 
 
 ## Adding Sponsors
@@ -124,11 +125,6 @@ signed_on: 2018-09-28
 
 Our Netlify setup is integrated with Github. That means **all branches** that
 are pushed to Github will be built on Netlify and will be available on a unique
-URL. If you need access to the Netlify account, ask Seb.
+URL. See 1Password for Netlify access. Check there for deploy status
 
 The `master` branch is the Production branch. 
-
-
-## Questions?
-
-Ask Seb 🤓.
