@@ -10,9 +10,8 @@ webassets = "*"
 cssmin = "*"
 pip = "*"
 jsmin = "*"
-"jinja2" = "*"
+jinja2 = "==3.0.2"
 idna = "*"
 
 [requires]
 python_version = "3.8"
-jinja2 = "==3.0.2""
